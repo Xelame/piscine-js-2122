@@ -1,9 +1,9 @@
 function dogYears(planetname, ageinsecond) {
   var ageinyears = ageinsecond / (365.25 * 24 * 60 * 60) * 7;
-  var earthAge = Math.round(ageinyears*100)/100;
+  var earthAge = ageinyears;
   switch (planetname) {
     case "earth":
-      return earthAge;
+      return Math.round(ageinyears*100)/100;
     case "mercury":
       return Math.round(earthAge / 0.2408467 * 100) / 100;
     case "venus":
