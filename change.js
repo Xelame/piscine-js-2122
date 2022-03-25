@@ -1,5 +1,3 @@
-const sourceObject = {}
-
 function set(objectkey, objectvalue) {
     sourceObject[objectkey] = objectvalue;
 }
