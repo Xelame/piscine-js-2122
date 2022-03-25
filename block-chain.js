@@ -4,8 +4,8 @@ function blockChain (data, prev = { index: 0, hash: '0' }) {
         hash : hashCode(`${prev.index + 1}${prev.hash}${JSON.stringify(data)}`),
         prev : prev,
         data : data,
-        chain: function(data) {
-            blockChain(data, prev = { index: prev.index + 1, hash: prev.hash })
+        chain: function () {
+            return blockChain(data, this);
         }
     }; 
 }
