@@ -30,7 +30,7 @@ function mapToObj (map) {
 }
 
 function objToArr (obj) {
-  return Object.keys(obj).map(key => [key, obj[key]]);
+  return Object.keys(obj).map(key => [obj[key]]);
 }
 
 function objToMap (obj) {
