@@ -56,6 +56,8 @@ function superTypeOf (value) {
       return 'Set';
     } else if (value instanceof Map) {
       return 'Map';
+    } else if (value === null) {
+      return 'null';
     } else {
       return 'Object';
     }
