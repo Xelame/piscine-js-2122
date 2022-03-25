@@ -59,7 +59,13 @@ function superTypeOf (value) {
     } else {
       return 'Object';
     }
+  } else if (typeof value === 'string') {
+    return 'String';
+  } else if (typeof value === 'number') {
+    return 'Number';
+  } else if (typeof value === 'function') {
+    return 'Function';
   } else {
-    return typeof value;
+      return typeof value;
   }
 }
