@@ -1,5 +1,4 @@
-const Object = {f, m, Δv, Δt, t, d}
-
+var Object = {f, m, Δv, Δt, t, d}
 
 
 function getAcceleration (Object) {
