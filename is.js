@@ -2,11 +2,11 @@ const is = {}
 is.num = function (value) {
   return typeof value === 'number'
 }
+is.nan = function (value) {
+  return is.num(value) && is.nan(value)
+}
 is.str = function (value) {
   return typeof value === 'string'
-}
-is.nan = function (value) {
-  return is.num(value) && isNaN(value)
 }
 is.bool = function (value) {
   return typeof value === 'boolean'
