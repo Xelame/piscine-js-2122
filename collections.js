@@ -49,5 +49,17 @@ function strToObj (str) {
 }
 
 function superTypeOf (value) {
-  return typeof value
+  if (typeof value === 'object') {
+    if (value instanceof Array) {
+      return 'array';
+    } else if (value instanceof Set) {
+      return 'set';
+    } else if (value instanceof Map) {
+      return 'map';
+    } else {
+      return 'object';
+    }
+  } else {
+    return typeof value;
+  }
 }
