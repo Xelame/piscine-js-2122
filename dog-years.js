@@ -5,19 +5,19 @@ function dogYears(planetname, ageinsecond) {
     case "earth":
       return earthAge;
     case "mercury":
-      return earthAge / 0.2408467;
+      return Math.round(earthAge / 0.2408467 * 100) / 100;
     case "venus":
-      return earthAge / 0.61519726;
+      return Math.round(earthAge / 0.61519726 * 100) / 100;
     case "mars":
-      return earthAge / 1.8808158;
+      return Math.round(earthAge / 1.8808158 * 100) / 100;
     case "jupiter":
-      return earthAge / 11.862615;
+      return Math.round(earthAge / 11.862615 * 100) / 100;
     case "saturn":
-      return earthAge / 29.447498;
+      return Math.round(earthAge / 29.447498 * 100) / 100;
     case "uranus":
-      return earthAge / 84.016846;
+      return Math.round(earthAge / 84.016846 * 100) / 100;
     case "neptune":
-      return earthAge / 164.79132;  
+      return Math.round(earthAge / 164.79132 * 100) / 100;
     default:
       return "Invalid planet name";
   }
