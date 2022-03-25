@@ -3,7 +3,7 @@ is.num = function (value) {
   return typeof value === 'number'
 }
 is.nan = function (value) {
-  return typeof value === NaN
+  return typeof value === "NaN"
 }
 is.str = function (value) {
   return typeof value === 'string'
