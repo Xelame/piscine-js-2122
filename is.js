@@ -20,7 +20,7 @@ is.arr = function(value) {
   return typeof value === 'object' && value instanceof Array
 }
 is.obj = function(value) {
-  return typeof value === 'object'
+  return typeof value === 'object' && value !== null && !(value instanceof Array)
 }
 is.fun = function(value) {
   return typeof value === 'function'
