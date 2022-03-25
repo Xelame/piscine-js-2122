@@ -51,13 +51,13 @@ function strToObj (str) {
 function superTypeOf (value) {
   if (typeof value === 'object') {
     if (value instanceof Array) {
-      return 'array';
+      return 'Array';
     } else if (value instanceof Set) {
-      return 'set';
+      return 'Set';
     } else if (value instanceof Map) {
-      return 'map';
+      return 'Map';
     } else {
-      return 'object';
+      return 'Object';
     }
   } else {
     return typeof value;
