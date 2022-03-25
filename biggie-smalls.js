@@ -1,2 +1,2 @@
-const smalls = Number.MIN_VALUE - 1 
-const biggie = Number.MAX_VALUE + 1
+const smalls = Number.MIN_SAFE_INTEGER
+const biggie = Number.MAX_SAFE_INTEGER
