@@ -34,7 +34,7 @@ function objToArr (obj) {
 }
 
 function objToMap (obj) {
-  return new Map(objToArr(obj));
+  return new Map(Object.entries(obj));
 }
 
 function arrToObj (arr) {
