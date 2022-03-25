@@ -38,7 +38,10 @@ function objToMap (obj) {
 }
 
 function arrToObj (arr) {
-  return new Object(arr);
+    return arr.reduce((obj, value, index) => {
+        obj[index] = value;
+        return obj;
+    }, {});
 }
 
 function strToObj (str) {
