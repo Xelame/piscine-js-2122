@@ -1,34 +1,35 @@
 const is = {}
-is.num = function (value) {
+
+is.num = function(value) {
   return typeof value === 'number'
 }
-is.str = function (value) {
+is.nan = function(value) {
+  return typeof value === 'number' && isNaN(value)
+}
+is.str = function(value) {
   return typeof value === 'string'
 }
-is.bool = function (value) {
+is.bool = function(value) {
   return typeof value === 'boolean'
 }
-is.undef = function (value) {
+is.undef = function(value) {
   return typeof value === 'undefined'
 }
-is.def = function (value) {
+is.def = function(value) {
   return !is.undef(value)
 }
-is.arr = function (value) {
+is.arr = function(value) {
   return typeof value === 'object' && value instanceof Array
 }
-is.obj = function (value) {
+is.obj = function(value) {
   return typeof value === 'object'
 }
-is.fun = function (value) {
+is.fun = function(value) {
   return typeof value === 'function'
 }
-is.nan = function (value) {
-  return Number.isNaN(value)
-}
-is.truthy = function (value) {
+is.truthy = function(value) {
   return !!value
 }
-is.falsy = function (value) {
+is.falsy = function(value) {
   return !value
 }
