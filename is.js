@@ -15,7 +15,7 @@ is.def = function (value) {
   return !is.undef(value)
 }
 is.arr = function (value) {
-  return Array.isArray(value)
+  return typeof value === 'object' && value instanceof Array
 }
 is.obj = function (value) {
   return typeof value === 'object'
