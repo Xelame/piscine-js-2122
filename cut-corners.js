@@ -48,10 +48,11 @@ function trunc(float) {
         while (num < float) {
             num++
         }
+        return num-1;
     } else {
         while (num > float) {
             num--
         }
+        return num+1;
     }
-    return num;
 }
