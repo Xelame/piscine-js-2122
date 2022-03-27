@@ -35,21 +35,25 @@ function divide(a, b) {
 	return result;
 }
 
-function modulo(a, b) {
+function moduloWithNegative(a, b) {
 	var isNegative = false;
-	if (a < 0) {
+	if (a < 0 && b < 0) {
 		isNegative = true;
+	} else if (a < 0) {
 		a = -a;
-	}
-	if (b < 0) {
-		isNegative = !isNegative;
+	} else if (b < 0) {
 		b = -b;
 	}
-	while (a >= b) {
-		a -= b;
-	}
 	if (isNegative) {
-		a = -a;
+		while (a <= b) {
+			a -= b;
+		}
+	} else {
+		while (a >= b) {
+			a -= b;
+		}
 	}
-	return a;
+	return a
 }
+
+console.log(moduloWithNegative(-123, 22)); // 13
