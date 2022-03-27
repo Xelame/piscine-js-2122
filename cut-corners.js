@@ -41,3 +41,17 @@ function floor(float) {
         return num-1;
     }
 }
+
+function trunc(float) {
+    let num = 0;
+    if (float > 0) {
+        while (num < float) {
+            num++
+        }
+    } else {
+        while (num > float) {
+            num--
+        }
+    }
+    return num;
+}
