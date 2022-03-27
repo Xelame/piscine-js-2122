@@ -1,4 +1,4 @@
-function slicewithloop(array, begin = 0, end = array.length) {
+function slice(array, begin = 0, end = array.length) {
     var result = [];
     for (var i = begin; i < end; i++) {
         result.push(array[i]);
