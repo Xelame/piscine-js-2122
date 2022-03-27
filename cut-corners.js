@@ -5,7 +5,7 @@ function round(float) {
             num++
         }
     } else {
-        while (num > float-0.5) {
+        while (num > float+0.5) {
             num--
         }
     }
