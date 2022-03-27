@@ -36,22 +36,8 @@ function divide(a, b) {
 }
 
 function modulo(a, b) {
-	var isNegative = false;
-	if (a < 0 && b < 0) {
-		isNegative = true;
-	} else if (a < 0) {
-		a = -a;
-	} else if (b < 0) {
-		b = -b;
-	}
-	if (isNegative) {
-		while (a <= b) {
-			a -= b;
-		}
-	} else {
-		while (a >= b) {
-			a -= b;
-		}
-	}
-	return a
+	q = divide(a, b);
+	return a - multiply(b, q);
 }
+
+console.log(modulo(-5, 3)); // -2
