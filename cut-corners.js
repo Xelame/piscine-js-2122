@@ -18,12 +18,12 @@ function ceil(float) {
         while (num < float) {
             num++
         }
-        return num+1;
+        return num;
     } else {
         while (num > float) {
             num--
         }
-        return num;
+        return num+1;
     }
 }
 
@@ -33,12 +33,12 @@ function floor(float) {
         while (num < float) {
             num++
         }
-        return num;
+        return num-1;
     } else {
         while (num > float) {
             num--
         }
-        return num-1;
+        return num;
     }
 }
 
