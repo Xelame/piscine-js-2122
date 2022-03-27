@@ -37,7 +37,6 @@ function divide(a, b) {
 
 function modulo(a, b) {
 	var isNegative = false;
-	var result = 0;
 	if (a < 0) {
 		isNegative = true;
 		a = -a;
@@ -48,10 +47,9 @@ function modulo(a, b) {
 	}
 	while (a >= b) {
 		a -= b;
-		result++;
 	}
 	if (isNegative) {
-		result = -result;
+		a = -a;
 	}
-	return result;
+	return a;
 }
