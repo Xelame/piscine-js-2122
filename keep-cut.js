@@ -22,6 +22,6 @@ function keepFirstLast (str) {
     if (str.length < 2) {
         return str;
     } else {
-        return keepFirst(keepLast(str));
+        return keepFirst(str) + keepLast(str);
     }
 }
