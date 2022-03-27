@@ -31,15 +31,17 @@ function ceil(float) {
 function trunc(float) {
     let num = 0;
     if (float > 1) {
-        while (num < float-1) {
+        while (num < float) {
             num++
             console.log(num);
         }
+        num--;
     } else if (float < 1) {
-        while (num > float+1) {
+        while (num > float) {
             num--
             console.log(num)
         }
+        num++;
     }
     return num;
 }
