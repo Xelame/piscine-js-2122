@@ -1,11 +1,11 @@
 function round(float) {
     let num = 0;
     if (float > 0) {
-        while (num < float-1,5) {
+        while (num < float) {
             num++
         }
     } else {
-        while (num > float+1,5) {
+        while (num > float) {
             num--
         }
     }
