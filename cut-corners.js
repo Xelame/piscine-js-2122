@@ -11,3 +11,17 @@ function round(float) {
     }
     return num;
 }
+
+function floor(float) {
+    let num = round(float);
+    if (float > 0) {
+        if (num < float) {
+            num++
+        }
+    } else {
+        if (num > float) {
+            num--
+        }
+    }
+    return num;
+}
