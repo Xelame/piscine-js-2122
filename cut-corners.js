@@ -39,16 +39,4 @@ function floor(float) {
     }
     return num;
 }
-function trunc(float) {
-    let num = 0;
-    if (float > 0) {
-        while (num < float-1) {
-            num++
-        }
-    } else {
-        while (num > float+1) {
-            num--
-        };
-    }
-    return num;
-}
+
