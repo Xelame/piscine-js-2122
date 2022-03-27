@@ -55,5 +55,3 @@ function moduloWithNegative(a, b) {
 	}
 	return a
 }
-
-console.log(moduloWithNegative(-123, 22)); // 13
