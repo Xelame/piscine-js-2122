@@ -19,5 +19,9 @@ function keepLast (str) {
 }
 
 function keepFirstLast (str) {
-  return keepFirst(keepLast(str));
+    if (str.length < 2) {
+        return str;
+    } else {
+        return keepFirst(keepLast(str));
+    }
 }
