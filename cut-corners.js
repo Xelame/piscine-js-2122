@@ -33,12 +33,12 @@ function trunc(float) {
     if (float > 0) {
         while (num < float-1) {
             num++
-            console.log(num, '\n');
+            console.log(num);
         }
     } else {
         while (num > float+1) {
             num--
-            console.log(num, '\n')
+            console.log(num)
         }
     }
     return num;
