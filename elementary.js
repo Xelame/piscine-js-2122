@@ -38,5 +38,3 @@ function divide(a, b) {
 function modulo(a, b) {
 	return a - multiply(b, divide(a, b));
 }
-
-console.log(modulo(-5, 3)); // -2
