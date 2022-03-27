@@ -35,7 +35,7 @@ function divide(a, b) {
 	return result;
 }
 
-function moduloWithNegative(a, b) {
+function modulo(a, b) {
 	var isNegative = false;
 	if (a < 0 && b < 0) {
 		isNegative = true;
