@@ -14,5 +14,8 @@ function round(float) {
 
 function floor(float) {
     let num = round(float);
+    if (num > float) {
+        return num-1;
+    }
     return num;
 }
