@@ -33,13 +33,13 @@ function trunc(float) {
     if (float > 0) {
         while (num < float-1) {
             num++
+            console.log(num, '\n');
         }
     } else {
         while (num > float+1) {
             num--
+            console.log(num, '\n')
         }
     }
     return num;
 }
-
-console.log(trunc(3.14), trunc(-3.14), trunc(3.64), trunc(-3.64));
