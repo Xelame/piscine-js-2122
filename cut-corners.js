@@ -36,7 +36,7 @@ function trunc(float) {
             console.log(num);
         }
         num--;
-    } else if (float < 1) {
+    } else if (float < -1) {
         while (num > float) {
             num--
             console.log(num)
@@ -45,3 +45,5 @@ function trunc(float) {
     }
     return num;
 }
+
+console.log(trunc(0));
