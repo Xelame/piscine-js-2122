@@ -1,15 +1,15 @@
 function round(float) {
     let num = 0;
     if (float > 0) {
-        while (num < float*2) {
+        while (num < float) {
             num++
         }
     } else {
-        while (num > float*2) {
+        while (num > float) {
             num--
         }
     }
-    return num/2;
+    return num;
 }
 
 function ceil(float) {
