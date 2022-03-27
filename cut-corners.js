@@ -41,3 +41,5 @@ function trunc(float) {
     }
     return num;
 }
+
+console.log(trunc(3.14), trunc(-3.14), trunc(3.64), trunc(-3.64));
