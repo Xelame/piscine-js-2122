@@ -29,5 +29,5 @@ function DNA (dna) {
                 rna += 'A';
         }
     }
-    return dna; 
+    return rna; 
 }
