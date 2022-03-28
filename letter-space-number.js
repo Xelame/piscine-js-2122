@@ -1,5 +1,8 @@
 function letterSpaceNumber (str) {
-  return str.replace(/[0-9]/g, function (match) {
-    return ' ' + match;
-  }).trim();
+    let regex = new RegExp('.\s\d');
+    let result = str.match(regex);
+    if (result === null) {
+        return undefined;
+    }
+    return result[0];
 }
