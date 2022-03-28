@@ -11,4 +11,5 @@ function nasa(N) {
             string += `${i}`;
         }
     }
+    return string;
 }
