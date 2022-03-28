@@ -1,10 +1,11 @@
 function split(string, separator) {
     let result = []
     for (let i = 0; i < string.length; i++) {
-        string = string.replace(separator, '');
+        if (string.slice(i, i+separator.length) === separator) {
+            result.push(string.slice(0, i));
+            string = string.slice(i+separator.length);
+            i = -1;
+        }
     }
-    for (let i = 0; i < string.length; i++) {
-        result.push(string[i])
-    }
-    return result
+    return result;
 }
