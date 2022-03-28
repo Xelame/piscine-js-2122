@@ -1,5 +1,5 @@
 function get(src, path){
-    if (src.includes('.')){
+    if (path.includes('.')){
         path.split('.').forEach(function(key){
             if (src[key] !== undefined){
                 src = src[key];
