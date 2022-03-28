@@ -8,8 +8,6 @@ function findExpression(number) {
             result += add4;
         } else if (i % 2 === 0) {
             result += mul2;
-        } else {
-            result += i;
         }
     }
     return result;
