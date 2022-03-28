@@ -15,5 +15,3 @@ function findExpression(number) {
     }
     return representation;
 }
-
-console.log(findExpression(16));
