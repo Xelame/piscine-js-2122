@@ -3,5 +3,3 @@ function vowel(str = '') {
     let result = str.replace(regex, '$&.'); // $& is the matched string
     return result;
 }
-
-console.log(vowelDots('hello')); // he.llo.
