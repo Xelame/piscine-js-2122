@@ -33,7 +33,7 @@ function DNA(dna) {
                 rna += 'G';
                 break
             case 'A':
-                rna += 'U';
+                rna += 'T';
                 break
         }
     }
