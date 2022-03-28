@@ -7,5 +7,6 @@ function split(string, separator) {
             i = -1;
         }
     }
-    return result.push(string);
+    result.push(string)
+    return result;
 }
