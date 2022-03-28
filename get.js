@@ -1,10 +1,15 @@
 function get(src, path) {
     path.split('.').forEach(function(key) {
         if (src[key] === undefined || src[key] === null) {
-            src = src;
+            return undefined
         } else {
             src = src[key];
         }
     });
-    return src[key];
+    if (src[path] === undefined) {
+        return undefined;
+    } else {
+        src = src[path];
+    }
+    return src;
 }
