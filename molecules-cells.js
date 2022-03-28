@@ -12,7 +12,7 @@ function RNA (rna) {
                 dna += 'A';
         }
     }
-    return rna;
+    return dna;
 }
 
 function DNA (dna) {
