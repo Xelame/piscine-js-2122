@@ -7,9 +7,8 @@ function get(src, path) {
         }
     });
     if (src[path] === undefined) {
-        return undefined;
+        return src;
     } else {
-        src = src[path];
+        return src[path];
     }
-    return src;
 }
