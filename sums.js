@@ -1,10 +1,15 @@
-// sums(4) = [ [1, 1, 1, 1], [1, 1, 2], [1, 3], [2, 2] ]
-// sums(3) = [ [1, 1, 1], [1, 2]]
-function sums(number) {
-    if (number > 0) {
-        return [sums(number - 1), 1];  // sums(4) == sums(3) + 1 == sums(2) + 1 + 1 == sums(1) + 1 + 1 + 1 == 1 + 1 + 1 + 1
+function sums(n, m) {
+    if (n == m) {
+        return 1 + sums(n, m - 1);
     }
-    return 1;
+    if (m == 0 || n < 0) {
+        return 0;
+    }
+    if (n == 0 || m == 1) {
+        return 1;
+    }
+    return sums(n, m - 1) + sums(n - m, m);
+
 }
 
-console.log(sums(4));
+console.log(sums(4, 3));
