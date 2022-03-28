@@ -5,5 +5,5 @@ function triangle (str, num) {
     output += str + '\n';
     str += flag
   }
-  return output;
+  return output[output.length-2];
 }
