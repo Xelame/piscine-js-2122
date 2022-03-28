@@ -1,4 +1,4 @@
-const normal = "hi"
-const begin = "^hi"
-const end = "hi$"
-const beginEnd = "^hi$"
+const normal = new RegExp('hi');
+const begin = new RegExp('^hi');
+const end = new RegExp('hi$');
+const beginEnd = new RegExp('^hi$');
