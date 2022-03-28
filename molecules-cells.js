@@ -1,14 +1,14 @@
-function RNA (rna) {  
+function RNA (rna) {
     for (var i = 0; i < rna.length; i++) {
         switch (rna[i]) {
             case 'A':
-                rna[i] = 'U';
+                rna.replace('A', 'U');
             case 'C':
-                rna[i] = 'G';
+                rna.replace('C', 'G');
             case 'G':
-                rna[i] = 'C';
+                rna.replace('G', 'C');
             case 'U':
-                rna[i] = 'A';
+                rna.replace('U', 'A');
         }
     }
     return rna;
@@ -18,14 +18,14 @@ function DNA (dna) {
     for (var i = 0; i < dna.length; i++) {
         switch (dna[i]) {
             case 'A':
-                dna[i] = 'T';
+                dna.replace('A', 'T');
             case 'C':
-                dna[i] = 'G';
+                dna.replace('C', 'G');
             case 'G':
-                dna[i] = 'C';
+                dna.replace('G', 'C');
             case 'T':
-                dna[i] = 'A';
+                dna.replace('T', 'A');
         }
     }
-    return dna[i]; 
+    return dna; 
 }
