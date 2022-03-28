@@ -5,7 +5,7 @@ function pyramid (string, number) {
         result += " ".repeat(numberOfSpaces) + string.repeat(i) + "\n";
         numberOfSpaces--
     }
-    return result
+    return result.slice(0, -1);
 }
 
 console.log(pyramid('#', 5));
