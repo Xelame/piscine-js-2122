@@ -1,7 +1,8 @@
 function triangle (str, num) {
-  var output = str;
+  var output = '';
   for (var i = 0; i < num; i++) {
-    output += output + '\n';
+    output += str + '\n';
+    str += str
   }
   return output;
 }
