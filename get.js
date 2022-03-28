@@ -1,12 +1,17 @@
 function get(src, path){
+    let isundef = false
     if (path.includes('.')){
         path.split('.').forEach(function(key){
             if (src[key] !== undefined){
                 src = src[key];
             } else {
-                return undefined;
+                isundef = true;
         }   });
-        return src
+        if (isundef){
+            return undefined;
+        } else {
+            return src;
+        }
     } else {
         if (!(src[path] === undefined)) {
             return src[path];
