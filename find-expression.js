@@ -1,6 +1,3 @@
-const add4 = '+4'
-const mul2 = '*2'
-
 function findExpression(number) {
     let result = 1;
     let representation = '1';
