@@ -7,5 +7,3 @@ function pyramid (string, number) {
     }
     return result.slice(0, -1);
 }
-
-console.log(pyramid('#', 5));
