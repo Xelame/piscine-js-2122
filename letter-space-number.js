@@ -3,5 +3,3 @@ function letterSpaceNumber (str) {
     let result = str.match(regex);
     return result == null ? [] : result;
 }
-
-console.log(letterSpaceNumber('He is 8 or 9 years old, not 10.'));
