@@ -29,7 +29,7 @@ function ceil(float) {
 }
 
 function trunc(float) {
-    return num-num%1;
+    return float-float%1;
 }
 
 console.log(trunc(0));
