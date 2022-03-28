@@ -1,13 +1,20 @@
+const add4 = '+4'
+const mul2 = '*2'
+
 function findExpression(number) {
-    if (number > 0) {
-        if (number/2 < 4 && (number/2) < 2 ) {
-            console.log(" *2")
-            return findExpression(number/2);
+    let result = 1;
+    let representation = '1';
+    while (result < number) {
+        if ((number - result) % 4 != 0) {
+            representation += " " + mul2;
+            result *= 2;
         } else {
-            console.log(" +4");
-            return findExpression(number-4);
+            representation += " " + add4;
+            result += 4;
         }
     }
+    if (result > number) {
+        return undefined
+    }
+    return representation;
 }
-
-findExpression(14);
