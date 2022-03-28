@@ -2,13 +2,21 @@ const add4 = '+4'
 const mul2 = '*2'
 
 function findExpression(number) {
-    let result = '1';
-    for (let i = 1; i <= number; i++) {
-        if (i % 4 === 0) {
-            result += " " + add4;
-        } else if (i % 2 === 0) {
-            result += " " + mul2;
+    let result = 1;
+    let representation = '1';
+    while (result < number) {
+        if (number / 2 > result) {
+            representation += " " + mul2;
+            result *= 2;
+        } else {
+            representation += " " + add4;
+            result += 4;
         }
     }
-    return result;
+    if (result != number) {
+        return undefined
+    }
+    return representation;
 }
+
+console.log(findExpression(16));
