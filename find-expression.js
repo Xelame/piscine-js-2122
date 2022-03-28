@@ -1,17 +1,13 @@
 function findExpression(number) {
-    let result = 1;
-    let representation = '1';
-    while (result < number) {
-        if (number / 2 > result) {
-            representation += " " + mul2;
-            result *= 2;
+    if (number > 0) {
+        if (number/2 < 4) {
+            console.log(" *2")
+            return findExpression(number/2);
         } else {
-            representation += " " + add4;
-            result += 4;
+            console.log(" +4");
+            return findExpression(number-4);
         }
     }
-    if (result != number) {
-        return undefined
-    }
-    return representation;
 }
+
+findExpression(14);
