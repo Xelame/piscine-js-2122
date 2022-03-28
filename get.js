@@ -6,6 +6,7 @@ function get(src, path){
             } else {
                 return undefined;
         }   });
+        return src
     } else {
         if (!(src[path] === undefined)) {
             return src[path];
