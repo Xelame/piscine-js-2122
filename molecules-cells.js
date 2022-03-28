@@ -1,33 +1,31 @@
-function RNA (rna) {
-    let dna = ''    
+function RNA (rna) {  
     for (var i = 0; i < rna.length; i++) {
         switch (rna[i]) {
             case 'A':
-                dna += 'U';
+                rna[i] = 'U';
             case 'C':
-                dna += 'G';
+                rna[i] = 'G';
             case 'G':
-                dna += 'C';
+                rna[i] = 'C';
             case 'U':
-                dna += 'A';
+                rna[i] = 'A';
         }
     }
-    return dna;
+    return rna;
 }
 
 function DNA (dna) {
-    let rna = ''
     for (var i = 0; i < dna.length; i++) {
         switch (dna[i]) {
             case 'A':
-                rna += 'T';
+                dna[i] = 'T';
             case 'C':
-                rna += 'G';
+                dna[i] = 'G';
             case 'G':
-                rna += 'C';
+                dna[i] = 'C';
             case 'T':
-                rna += 'A';
+                dna[i] = 'A';
         }
     }
-    return rna; 
+    return dna[i]; 
 }
