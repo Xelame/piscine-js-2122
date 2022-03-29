@@ -1,3 +1,3 @@
 function ionOut (string) {
-    return string.match(RegExp(/\w*t(?=ion)/g)) == null ? string : string.replace(RegExp(/\w*t(?=ion)/g), '');
+    return string.match(RegExp(/\w*t(?=ion)/g)) == null ? [] : string.match(RegExp(/\wt(?=ion)/g));
 }
