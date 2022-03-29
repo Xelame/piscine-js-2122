@@ -1,28 +1,21 @@
 function round(float) {
-    let num = 0;
-    if (float > 0) {
-        while (num < float-0.5) {
-            num++
-        }
-    } else {
-        while (num > float+0.5) {
-            num--
-        }
-    }
-    return num;
+    if (Math.abs(float)%1 >= 0.5) {
+        return Math.ceil(float);
+    } 
+    return Math.floor(float);   
 }
 
 function floor(float) {
-    let num = round(float);
-    if (num > float) {
+    let num = trunc(float);
+    if (num > 0) {
         return num-1;
     }
     return num;
 }
 
 function ceil(float) {
-    let num = round(float);
-    if (num < float) {
+    num = trunc(float);
+    if (num < 0) {
         return num+1;
     }
     return num;
@@ -32,4 +25,4 @@ function trunc(float) {
     return float-float%1;
 }
 
-console.log(trunc(0));
+console.log(round(-7.4));
