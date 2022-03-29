@@ -1,3 +1,4 @@
 function getURL (url) {
-    return url.match(/(https|http):\/\/[a-zA-Z\/0-9=&?_@\[,\]\.-]*/g) == null ? [] : url.match(/(https|http):\/\/[a-zA-Z\/0-9=&?_@\[,\]\.-]*/g);
+    let regex = /(https|http):\/\/(\w*\/|\w*\.\w*\/|\w*\.\w*\.\w*\/)[a-zA-Z\/0-9=&?_@\[,\]\.-]*/g
+    return url.match(regex) == null ? [] : url.match(regex);
 }
