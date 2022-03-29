@@ -1,3 +1,4 @@
 function ionOut (string) {
-    return str.match(RegExp(/\w*t(?=ion)/g));
+    let regex = RegExp(/\w*t(?=ion)/g);
+    return str.match(regex);
 }
