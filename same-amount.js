@@ -1,3 +1,6 @@
+const data = `qqqqqqq q qqqqqqqfsqqqqq q qq  qw w wq wqw  wqw
+ijnjjnfapsdbjnkfsdiqw klfsdjn fs fsdnjnkfsdjnk sfdjn fsp fd`
+
 function sameAmount (str, regex1, regex2) {
     let regex1g = new RegExp(regex1, 'g');
     let regex2g = new RegExp(regex2, 'g');
@@ -8,3 +11,5 @@ function sameAmount (str, regex1, regex2) {
     }
     return result1.length === result2.length;
 }
+
+console.log(data, /q /, /qqqqqqq/)
