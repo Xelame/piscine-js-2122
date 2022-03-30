@@ -9,5 +9,3 @@ function groupPrice (string) {
     }
     return prices
 }
-
-console.log(groupPrice('The price of the cereals is $4.00.')); // [['$4.00.', '4', '00']]
