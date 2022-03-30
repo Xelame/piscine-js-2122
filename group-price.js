@@ -1,8 +1,9 @@
 function groupPrice (string) {
     let prices = []
+    let result = []
     let regex = /[a-zA-Z\$]+([0-9]+)\.([0-9]+)/
     while (regex.test(string)) {
-        let result = string.match(regex);
+        result = string.match(regex);
         string.replace(regex, '');
         prices.push([result[0], result[1], result[2]]);
     }
