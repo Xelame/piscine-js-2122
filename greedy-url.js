@@ -23,7 +23,7 @@ function notSoGreedy (url) {
     let regexQuery = /(&|\?)[\[\]\w.,@^=%:\/~+#-]+/g;
     for (let i = 0; i < validURL.length; i++) {
         if (validURL[i].match(regexQuery) != null) {
-            if (2 <= validURL[i].match(regexQuery).length <= 3) {
+            if (2 <= validURL[i].match(regexQuery).length && validURL[i].match(regexQuery).length <= 3) {
                 result.push(validURL[i]);
             }
         }
