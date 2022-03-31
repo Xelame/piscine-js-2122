@@ -1,5 +1,5 @@
-function isValid(date) {
-    return typeof date;
+function isValid(date= new Date()) {
+    return Object.prototype.toString.call(date) === '[object Date]';
 }
 
 function isAfter(date, date2) {
@@ -18,4 +18,4 @@ function isPast(date) {
     return isBefore(date, new Date());
 }
 
-console.log(isValid)
+console.log(isValid);
