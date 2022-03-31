@@ -1,4 +1,5 @@
-function isValid(date= new Date('')) {
+function isValid(date) {
+    date = new Date(date);
     return Object.prototype.toString.call(date) === '[object Date]' && !isNaN(date.getTime());
 }
 
@@ -18,4 +19,4 @@ function isPast(date) {
     return isBefore(date, new Date());
 }
 
-console.log(isValid());
+console.log(Date.now());
