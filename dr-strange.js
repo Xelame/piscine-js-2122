@@ -3,6 +3,6 @@ const newWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturd
 
 function addWeek (date) {
     console.log(date.getDay(), date.getMonth(), date.getFullYear());
-    let day = (date.getDay()*(date.getMonth()+1)*date.getFullYear()-1)%14;
+    let day = (date.getDate()*(date.getMonth()+1)*date.getFullYear()-1)%14;
     return newWeek[day];
 }
