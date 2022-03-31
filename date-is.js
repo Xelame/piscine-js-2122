@@ -1,4 +1,4 @@
-function isValid(date= new Date()) {
+function isValid(date= new Date('')) {
     return Object.prototype.toString.call(date) === '[object Date]';
 }
 
