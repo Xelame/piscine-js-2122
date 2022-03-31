@@ -6,11 +6,17 @@ function isValid(date) {
 }
 
 function isAfter(date, date2) {
-    return date.getTime() > date2.getTime();
+    if (isValid(date) && isValid(date2)) {
+        return date.getTime() > date2.getTime();
+    }
+    return false;
 }
 
 function isBefore(date, date2) {
-    return date.getTime() < date2.getTime();
+    if (isValid(date) && isValid(date2)) {
+        return date.getTime() < date2.getTime();
+    }
+    return false;
 }
 
 function isFuture(date) {
