@@ -6,3 +6,5 @@ function addWeek (date) {
     let day = ((date.getDate()*(date.getMonth()+1)*date.getFullYear())-1)%14;
     return newWeek[day];
 }
+
+console.log(addWeek(new Date('2001-11-07')));
