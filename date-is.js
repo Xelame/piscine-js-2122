@@ -1,6 +1,8 @@
 function isValid(date) {
-    date = new Date(date);
-    return Object.prototype.toString.call(date) === '[object Date]' && !isNaN(date);
+    if (typeof date == "number") {
+        date = new Date(date);
+    }
+    return Object.prototype.toString.call(date) === '[object Date]' && !isNaN(date.getTime());
 }
 
 function isAfter(date, date2) {
