@@ -1,7 +1,10 @@
 function firstDayWeek(week, year) {
-    var result  = new Date(year, 0, (week * 7) - 6);
-    if (week == 1) {
-        return `01-${result.getMonth() + 1}-${result.getFullYear()}`;
+    var result  = new Date(year, 0, (week * 7) -6);
+    var weekInString = `${result.getMonth() + 1}`;
+    if (weekInString.length == 1) {
+        weekInString = `0${weekInString}`;
     }
-    return `${result.getDate()}-${result.getMonth() + 1}-${result.getFullYear()}`;
-}
+    if (week == 1) {
+        return `01-${weekInString}-${result.getFullYear()}`;
+    }
+    return `${result.getDate()}-${weekInString}-${result.getFullYear()}`;
