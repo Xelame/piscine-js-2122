@@ -1,5 +1,5 @@
 function isValid(date) {
-    return typeof date === 'object' && date instanceof Date;
+    return typeof date;
 }
 
 function isAfter(date, date2) {
@@ -17,3 +17,5 @@ function isFuture(date) {
 function isPast(date) {
     return isBefore(date, new Date());
 }
+
+console.log(isValid)
