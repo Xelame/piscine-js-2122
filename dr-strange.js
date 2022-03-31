@@ -7,7 +7,7 @@ function addWeek (date) {
     if (day > 6) {
         return "second" + newWeek[date.getDay()-1];
     }
-    return newWeek[day];
+    return newWeek[day-1];
 }
 
 console.log(addWeek(new Date('2001-11-07')));
