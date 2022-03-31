@@ -5,7 +5,7 @@ function addWeek (date) {
     console.log(date.getDay(), date.getMonth(), date.getFullYear());
     let day = date.getDate()%14;
     if (day > 7) {
-        return "second" + newWeek[date.getDay()-1];
+        return "second" + newWeek[date.getDay()];
     }
     return newWeek[day-1];
 }
