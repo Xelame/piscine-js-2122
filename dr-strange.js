@@ -5,9 +5,6 @@ const newWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturd
 
 function addWeek(date){
     let day0 = new Date('0001-01-01')
-    function diffDates(day_one, day_two) {
-        return ((day_one-day_two) / (60 * 60 * 24 * 1000))/7
-    }
     function getWeekDay(date) {
         let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         return days[date.getDay()];
@@ -22,6 +19,10 @@ function addWeek(date){
     }
 }
 
+function diffDates(day_one, day_two) {
+    return ((day_one-day_two) / (60 * 60 * 24 * 1000))/7
+}
+
 function timeTravel({date,hour,minute,second}){
    date.setHours(hour)
    date.setMinutes(minute)
@@ -29,4 +30,4 @@ function timeTravel({date,hour,minute,second}){
    return date
 }
 
-console.log(new Date('0001-01-01'), new Date('0001-01-09'));
+console.log(diffDates(new Date('0001-01-01'), new Date('0001-01-09')));
