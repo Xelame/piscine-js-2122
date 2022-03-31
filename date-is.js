@@ -1,5 +1,5 @@
 function isValid(date) {
-    return date instanceof Date && !isNaN(date);
+    return typeof date === 'object' && date instanceof Date;
 }
 
 function isAfter(date, date2) {
