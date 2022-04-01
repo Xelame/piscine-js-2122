@@ -19,12 +19,8 @@ function matchCron(cron, date) {
     if (!(month === '*' || month === (date.getMonth() + 1))) {
         isValid = false;
     }
-    if (!(dayOfWeek === '*')) {
+    if (!(dayOfWeek === '*') || !(dayOfWeek === 7 && date.getDay === 0) || !(date.getDay !== 0 && Number(dayOfWeek) === date.getDay())) {
         isValid = false;
-    }else if(!(dayOfWeek === 7 && date.getDay === 0)){
-        isValid = false
-    }else if(!(date.getDay !== 0 && Number(dayOfWeek) === date.getDay())){
-        isValid = false
     }
     if (!(year === '*' || year === date.getFullYear())) {
         isValid = false;
