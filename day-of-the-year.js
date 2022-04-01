@@ -6,3 +6,6 @@ function dayOfTheYear(date) {
     count += date.getDate();
     return count;
 }
+
+
+console.log(dayOfTheYear(new Date('1664-08-09')))
