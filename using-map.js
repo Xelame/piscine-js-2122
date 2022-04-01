@@ -32,5 +32,5 @@ function trimTemp (cities) {
 }
 
 function tempForecasts(cities) {
-    return city => `${fahrenheitToCelsius(trimTemp(city)[0].temperature)}elsius in ${upperCasingStates(city.city)}, ${upperCasingStates(city.state)}`)
+    return cities.map(city => `${fahrenheitToCelsius(city.temperature)}elsius in ${upperCasingStates(city.city)}, ${upperCasingStates(city.state)}`)
 }
