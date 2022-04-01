@@ -1,6 +1,6 @@
 function firstDayWeek(week, year) {
     var date = new Date(year,0, 1);
-    console.log(date.getDay);
+    console.log(date.getDay());
     if (week == 1) {
         var result  = new Date(year, 0, ((week-1) * 7)+1); 
     } else {
