@@ -13,7 +13,5 @@ function filter5Vowels(array) {
 }
 
 function filter1DistinctVowel(array) {
-    return array.map(function(state) {
-        return state.toLowerCase().match(/[AEOIUaeoiu]/g)
-    })
+    return array.map(state => _.CountBy(state.toLowerCase().match(/[AEOIUaeoiu]/g))[state.toLowerCase().match(/[AEOIUaeoiu]/g)[0]] == state.toLowerCase().match(/[AEOIUaeoiu]/g).length)
 }
