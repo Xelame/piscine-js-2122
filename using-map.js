@@ -13,6 +13,6 @@ function citiesOnly(cities) {
     return cities.map(city => city.city)
 }
 
-function upperCasingStates (list) {
-    return list.map(city => city.toUpperCase())
+function upperCasingStates(list) {
+    return list.map(city => city[0].toUpperCase())
 }
