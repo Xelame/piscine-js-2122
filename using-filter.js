@@ -29,7 +29,7 @@ function filter1DistinctVowel(array) {
 }
 
 function multiFilter(array) {
-    console.log(array.filter(state => state.capital.lenght >= 8))
+    console.log(array.filter(state => state.capital.length >= 8))
 
     /*
     .filter(state => !(/^[AEOIU]/.test(state.name)))
