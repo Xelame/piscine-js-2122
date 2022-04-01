@@ -26,5 +26,5 @@ function trimTemp (cities) {
         return {
             city: city.city,
             temperature: city.temperature.trim()
-        })
+        }})
 }
