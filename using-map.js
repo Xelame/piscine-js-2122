@@ -25,8 +25,8 @@ function trimTemp (cities) {
     return cities.map(function(city) {
         return {
             city: city.city,
-            region: city.region,
             state: city.state,
+            region: city.region,
             temperature: city.temperature.trim()
         }})
 }
