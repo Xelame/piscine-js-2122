@@ -11,5 +11,5 @@ function isLeapYear(date) {
 }
 
 function isLastDayOfMonth (date) {
-  return date.getDate() === new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()-1;
+  return date.getDate() === new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 }
