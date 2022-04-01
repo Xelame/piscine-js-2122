@@ -8,6 +8,7 @@ function firstDayWeek(week, year) {
     }
     if (week == 52) {
         var result = new Date(year, 11, 32);
+    }
     var dayInString = `${result.getDate()}`;
     var weekInString = `${result.getMonth() + 1}`;
     if (weekInString.length == 1) {
