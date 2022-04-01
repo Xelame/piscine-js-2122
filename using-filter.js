@@ -22,7 +22,7 @@ function filter1DistinctVowel(array) {
             }
         }
         if (count==vowels.length) {
-            return state
+            return true
         }
     })
 }
