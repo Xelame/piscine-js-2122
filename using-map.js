@@ -27,6 +27,6 @@ function trimTemp (cities) {
             city: city.city,
             state: city.state,
             region: city.region,
-            temperature: city.temperature.replaceAll(' ', '')
+            temperature: city.temperature.toString.replaceAll(' ', '')
         }})
 }
