@@ -4,6 +4,5 @@ function dayOfTheYear(date) {
         count++;
         console.log(count);
     }
-    
     return count;
 }
