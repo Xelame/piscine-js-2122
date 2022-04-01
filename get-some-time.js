@@ -3,7 +3,7 @@ function firstDayWeek(week, year) {
     if (week == 1) {
         var result  = new Date(year, 0, ((week-1) * 7)+1); 
     } else {
-        var result  = new Date(year, 0, ((week) * 7)-5 - date.getDay());  
+        var result  = new Date(year, 0, ((week-1) * 7) - date.getDay());  
     }
     var dayInString = `${result.getDate()}`;
     var weekInString = `${result.getMonth() + 1}`;
