@@ -16,3 +16,7 @@ function citiesOnly(cities) {
 function upperCasingStates(list) {
     return list.map(city => city.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' '))
 }
+
+function fahrenheitToCelsius(temperature) {
+    return temperature.map(temp => (parseInt(temp.slice(0, temp.length - 1)) - 32) * 5 / 9)
+}
