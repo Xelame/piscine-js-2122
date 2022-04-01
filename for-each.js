@@ -1,3 +1,3 @@
 function forEach(array, func) {
-    return array.reduce((previous, current) => current(previous), initial)
+    return array.forEach(func)
 }
