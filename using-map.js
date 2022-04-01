@@ -33,5 +33,5 @@ function trimTemp (cities) {
 
 function tempForecasts(cities) {
     cities = trimTemp(cities)
-    return cities.map(city => `${Math.floor((parseInt(city.temperature.slice(0, city.temperature.length - 1)) - 32) * 5 / 9)}elsius in ${city.city.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ')}, ${city.state.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ')}`)
+    return cities.map(city => `${Math.floor((parseInt(city.temperature.slice(0, city.temperature.length - 1)) - 32) * 5 / 9)}°Celsius in ${city.city.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ')}, ${city.state.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ')}`)
 }
