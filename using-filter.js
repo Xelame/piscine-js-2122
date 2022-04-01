@@ -4,6 +4,6 @@ function filterShortStateName(array) {
   })
 }
 
-function filterShortStateName(array) {
+function filterStartVowel(array) {
     return array.filter(state => /^[AEOIUaeoiu]/.test(state))
 }
