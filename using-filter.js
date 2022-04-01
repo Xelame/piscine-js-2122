@@ -16,12 +16,12 @@ function filter1DistinctVowel(array) {
     return array.filter(function(state) {
         let vowels = state.toLowerCase().match(/[aeoiu]/g)
         let count = 0
-        for (let i = 0; i < vowels.lenght; i++) {
+        for (let i = 0; i < vowels.length; i++) {
             if (vowels[0] == vowels[i]) {
                 count++
             }
         }
-        console.log(count, state.toLowerCase().match(/[aeoiu]/g))
+        console.log(count, state.toLowerCase().match(/[aeoiu]/g).length)
         if (count==vowels.length) {
             return true
         }
