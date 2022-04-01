@@ -30,3 +30,7 @@ function trimTemp (cities) {
             temperature: city.temperature.replace(/\s/g, '')
         }})
 }
+
+function tempForecasts(cities) {
+    return cities.map(city => `${fahrenheitToCelsius(trimTemp(city.temperature))}elsius in ${upperCasingStates(city.city)}, ${upperCasingStates(city.state)}`)
+}
