@@ -12,3 +12,7 @@ const city = [
 function citiesOnly(cities) {
     return cities.map(city => city.city)
 }
+
+function upperCasingStates (list) {
+    return list.map(city => city.toUpperCase())
+}
