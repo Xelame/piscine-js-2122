@@ -32,6 +32,6 @@ function multiFilter(array) {
     return array.filter(state => state.capital.length >= 8)
     .filter(state => !(/^[AEOIU]/.test(state.name)))
     .filter(state => /[AEOIU]/.test(state.tag))
-    .filter(state => state.region != South)
+    .filter(state => state.region != "South")
 } 
 
