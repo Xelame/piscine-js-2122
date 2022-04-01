@@ -14,9 +14,9 @@ function filter5Vowels(array) {
 
 function filter1DistinctVowel(array) {
     return array.map(function(state) {
-        vowels = state.toLocaleLowerCase().match(/[aeoiu]/g).length
+        vowels = state.toLocaleLowerCase().match(/[aeoiu]/g)
         count = 0
-        for (let i = 0; i < vowels.length; i++) {
+        for (let i = 0; i < vowels.lenght; i++) {
             if (vowels[0] == vowels[i]) {
                 count++
             }
