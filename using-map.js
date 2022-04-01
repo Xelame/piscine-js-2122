@@ -22,8 +22,9 @@ function fahrenheitToCelsius(temperature) {
 }
 
 function trimTemp (cities) {
-    return cities.map(city => {
-        city : city.city
-        temperature : city.temperature.trim()
-    })
+    return cities.map(function(city) {
+        return {
+            city: city.city,
+            temperature: city.temperature.trim()
+        })
 }
