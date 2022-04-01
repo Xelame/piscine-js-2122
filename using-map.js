@@ -31,6 +31,6 @@ function trimTemp (cities) {
         }})
 }
 
-function tempForecasts(cities) {
-    return typeof cities
+function tempForecasts(city) {
+    return `${fahrenheitToCelsius(trimTemp(city.temperature))}elsius in ${upperCasingStates(city.city)}, ${upperCasingStates(city.state)}`)
 }
