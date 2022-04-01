@@ -13,5 +13,13 @@ function filter5Vowels(array) {
 }
 
 function filter1DistinctVowel(array) {
-    return array.map(state => _.CountBy(state.toLowerCase().match(/[AEOIUaeoiu]/g))[state.toLowerCase().match(/[AEOIUaeoiu]/g)[0]] == state.toLowerCase().match(/[AEOIUaeoiu]/g).length)
+    return array.map(function(state) {
+        for (let index = 0; index < ["[Aa]", "[Ee]", "[Ii]", "[Oo]", "[Ue]"].length; index++) {
+            const vowel = ["[Aa]", "[Ee]", "[Ii]", "[Oo]", "[Ue]"][index];
+            if (state.match(RegExp(vowel, 'g')).length ==  state.match(/[AEOIUaeoiu]/g).length) {
+                return true
+            }
+        }
+        return false
+    })
 }
