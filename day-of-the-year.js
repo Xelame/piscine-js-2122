@@ -1,8 +1,8 @@
 function dayOfTheYear(date) {
-    let count = 1;
-    for (let i = 1; new Date(date.getFullYear(), 0, i) != date; i++) {
-        count++;
-        console.log(count);
+    let count = 0;
+    for (let i = 1; i < date.getMonth(); i++) {
+        count += new Date(date.getFullYear(), i, 0).getDate();
     }
+    count += date.getDate();
     return count;
 }
