@@ -13,5 +13,5 @@ function firstDayWeek(week, year) {
     if (dayInString.length == 1) {
         dayInString = `0${dayInString}`;
     }
-    return `${dayInString}-${weekInString}-${result.getFullYear()}`;
+    return `${dayInString}-${weekInString}-${year}`;
 }
