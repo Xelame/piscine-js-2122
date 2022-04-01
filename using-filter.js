@@ -5,5 +5,5 @@ function filterShortStateName(array) {
 }
 
 function filterShortStateName(array) {
-    return array.filter(state => /[AEOIUaeoiu]\w/.test(state))
+    return array.filter(state => /^[AEOIUaeoiu]/.test(state))
 }
