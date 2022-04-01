@@ -11,3 +11,9 @@ function filterStartVowel(array) {
 function filter5Vowels(array) {
     return array.filter(state => state.match(/[AEOIUaeoiu]/g).length >= 5)
 }
+
+function filter1DistinctVowel(array) {
+    return array.map(function(state) {
+        return state.toLowerCase().match(/[AEOIUaeoiu]/g)
+    })
+}
