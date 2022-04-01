@@ -20,11 +20,10 @@ function filter1DistinctVowel(array) {
             console.log(state.match(/[AEOIUaeoiu]/g).length)
             if ((state.match(RegExp(vowel, 'g')))) {
                 if (state.match(RegExp(vowel, 'g')).length == state.match(/[AEOIUaeoiu]/g).length) {
-                    return true
+                    return state
                 }
             }   
         }
-        return false
     })
 }
 
