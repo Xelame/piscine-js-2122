@@ -31,7 +31,7 @@ function filter1DistinctVowel(array) {
 function multiFilter(array) {
     return array.filter(state => state.capital.length >= 8)
     .filter(state => !(/^[AEOIU]/.test(state.name)))
-    .filter(state => /[AEOIU]/.test(state.tag) && state.tag.match(/[AEOIU]/g).length >= 1)
+    .filter(state => /[AEOIU]/.test(state.tag))
     .filter(state => state.region != South)
 } 
 
