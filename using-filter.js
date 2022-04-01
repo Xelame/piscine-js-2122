@@ -14,17 +14,17 @@ function filter5Vowels(array) {
 
 function filter1DistinctVowel(array) {
     return array.map(function(state) {
-        const vowels = ["[Aa]", "[Ee]", "[Ii]", "[Oo]", "[Ue]"]
-        for (let index = 0; index < vowels.length; index++) {
-            const vowel = vowels[index];
-            console.log(state.match(/[AEOIUaeoiu]/g).length)
-            if ((state.match(RegExp(vowel, 'g') != undefined))) {
-                if (state.match(RegExp(vowel, 'g')).length == state.match(/[AEOIUaeoiu]/g).length) {
-                    return state
-                }
-            }   
+        vowels = state.toLocaleLowerCase().match(/[aeoiu]/g).length
+        count = 0
+        for (let i = 0; i < vowels.length; i++) {
+            if (vowels[0] == vowels[i]) {
+                count++
+            }
         }
-    })
+        if (count==vowels.length) {
+            return state
+        }
+    }
 }
 
 
