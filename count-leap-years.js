@@ -4,6 +4,7 @@ function isLeapYear(date) {
 
 function countLeapYears(date) {
     let years = date.getFullYear()
+    let count = 0
     if (date.getFullYear() < 1900) {
         years -= 1900
     }
@@ -14,3 +15,5 @@ function countLeapYears(date) {
     }
     return count
 }
+
+console.log(countLeapYears(new Date('0001-12-01')));
