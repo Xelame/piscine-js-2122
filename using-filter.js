@@ -21,10 +21,11 @@ function filter1DistinctVowel(array) {
                 count++
             }
         }
-        console.log(count, vowels.lenght)
+        console.log(count, state.toLowerCase().match(/[aeoiu]/g))
         if (count==vowels.length) {
             return true
         }
+        return false
     })
 }
 
