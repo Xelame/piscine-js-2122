@@ -23,7 +23,7 @@ function matchCron(cron, date) {
         isValid = false;
     }else if(!(dayOfWeek === 7 && date.getDay === 0)){
         isValid = false
-    }else if(!(date.getDay !== 0 && Number(dayWeek) === date.getDay())){
+    }else if(!(date.getDay !== 0 && Number(dayOfWeek) === date.getDay())){
         isValid = false
     }
     if (!(year === '*' || year === date.getFullYear())) {
