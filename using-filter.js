@@ -17,7 +17,7 @@ function filter1DistinctVowel(array) {
         const vowels = ["[Aa]", "[Ee]", "[Ii]", "[Oo]", "[Ue]"]
         for (let index = 0; index < vowels.length; index++) {
             const vowel = vowels[index];
-            console.log(state.match(RegExp(vowel, 'g'), state.match(/[AEOIUaeoiu]/g).length)
+            console.log(state.match(RegExp(vowel, 'g')), state.match(/[AEOIUaeoiu]/g).length)
             if (state.match(RegExp(vowel, 'g')).length == state.match(/[AEOIUaeoiu]/g).length) {
                 return true
             }
