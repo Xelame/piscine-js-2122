@@ -21,6 +21,7 @@ function filter1DistinctVowel(array) {
                 count++
             }
         }
+        console.log(count, vowels.lenght)
         if (count==vowels.length) {
             return true
         }
