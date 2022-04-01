@@ -18,5 +18,5 @@ function upperCasingStates(list) {
 }
 
 function fahrenheitToCelsius(temperature) {
-    return temperature.map(temp => (parseInt(temp.slice(0, temp.length - 1)) - 32) * 5 / 9)
+    return temperature.map(temp => (`${(parseInt(temp.slice(0, temp.length - 1)) - 32) * 5 / 9}°C`))
 }
