@@ -9,5 +9,5 @@ function filterStartVowel(array) {
 }
 
 function filter5Vowels(array) {
-    return array.filter(state => state.match(/[AEOIUaeoiu]/g).length === 5)
+    return array.filter(state => state.match(/[AEOIUaeoiu]/g).length >= 5)
 }
