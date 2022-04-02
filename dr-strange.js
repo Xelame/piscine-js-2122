@@ -23,5 +23,3 @@ function timeTravel({date,hour,minute,second}){
    date.setSeconds(second)
    return date
 }
-
-console.log(Date('0001-01-01'), Date('0001-01-09'));
