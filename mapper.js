@@ -9,7 +9,7 @@ function map(array, func) {
 function flatMap (array, func) {
     const newArray = []
     for (let i = 0; i < array.length; i++) {
-        newArray.push(...func(array[i]))
+        newArray.push(...[func(array[i], i, array)])
     }
     return newArray
 }
