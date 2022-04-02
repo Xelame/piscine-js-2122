@@ -13,5 +13,9 @@ function foldRight (array, func, accumulator) {
 }
 
 function reduce (array, func) {
-    return fold(array, func, array[0]) - array[0]
+    if (typeof array[0] == 'string') {
+        return fold(array, func, "")
+    } else {
+        return fold(array, func, 0)
+    }
 }
