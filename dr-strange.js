@@ -1,8 +1,3 @@
-const newWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-
-
-
-
 function addWeek(date){
     let day0 = new Date('0001-01-01')
     function diffDates(day_one, day_two) {
