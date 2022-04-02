@@ -19,3 +19,11 @@ function reduce (array, func) {
         return fold(array, func, 0)
     }
 }
+
+function reduceRight (array, func) {
+    if (typeof array[0] == 'string') {
+        return foldRight(array, func, "")
+    } else {
+        return foldRight(array, func, 0)
+    }
+}
