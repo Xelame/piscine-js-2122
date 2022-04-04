@@ -1,5 +1,5 @@
 function flow (arrayOfFunc) {
     return function (value) {
-        return arrayOfFunc.reduce((func, value) =>   func(value), value)
+        return arrayOfFunc.reduce((value, func) => func(value), value)
     }
 }
