@@ -45,7 +45,7 @@ function firstDayWeek(week, year) {
         var result  = new Date(year); 
     } else {
         var result  = new Date(year, 0, ((week-1) * 7));
-        for (let decalage = 1; result.getDay() >= 1; decalage++) {
+        for (let decalage = 1; result.getDay() > 1; decalage++) {
             console.log(days[result.getDay()]);
             result = new Date(year, 0, ((week-1) * 7)-decalage)
         }
@@ -53,7 +53,7 @@ function firstDayWeek(week, year) {
     if ((week-1)*7 > 365) {
         var result = new Date(year, 11, 32);
     }
-    var dayInString = `${result.getDate()}`;
+    var dayInString = `${result.getDate() - 1}`;
     var weekInString = `${result.getMonth() + 1}`;
     if (weekInString.length == 1) {
         weekInString = `0${weekInString}`;
@@ -65,4 +65,4 @@ function firstDayWeek(week, year) {
 }
 
 
-firstDayWeek(2, '1000')
+console.log(firstDayWeek(52, '1000'))
