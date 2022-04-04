@@ -1,4 +1,4 @@
-const sums = n => {
+function sums(n) {
     if (n <= 1) {
         return []
     }
