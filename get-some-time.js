@@ -32,10 +32,11 @@ function firstDayWeek(week,year){
     }
 
     function getWeekDay(date) {
-        let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         return days[date.getDay()-1];
     }
 */
+
+let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     
 
 function firstDayWeek(week, year) {
@@ -44,12 +45,11 @@ function firstDayWeek(week, year) {
         var result  = new Date(year); 
     } else {
         var result  = new Date(year, 0, ((week) * 7));  
-        console.log(result.getDay());
     }
     if ((week-1)*7 > 365) {
         var result = new Date(year, 11, 32);
     }
-    console.log(result.getDay);
+    console.log(days[result.getDay()]);
     var dayInString = `${result.getDate()}`;
     var weekInString = `${result.getMonth() + 1}`;
     if (weekInString.length == 1) {
