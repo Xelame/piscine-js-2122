@@ -45,8 +45,8 @@ function firstDayWeek(week, year) {
         var result  = new Date(year); 
     } else {
         var result  = new Date(year, 0, ((week-1) * 7));
-        while (result.getDay() != 1) {
-            result = new Date(year, 0, result.getDate()-1)
+        for (let decalage = 1; result.getDay() != 1; i++) {
+            result = new Date(year, 0, ((week-1) * 7)-i)
         }
     }
     if ((week-1)*7 > 365) {
