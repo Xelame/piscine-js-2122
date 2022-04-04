@@ -1,4 +1,4 @@
 function flow(arrayOfFunc) {
-    return arrayOfFunc.reduce((func) => func(...arguments), value)
+    return arrayOfFunc.reduce((func) => func(...arguments))
 }
 
