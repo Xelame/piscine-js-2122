@@ -1,6 +1,13 @@
 function flow (arrayOfFunc) {
     return function (value) {
-        return arrayOfFunc.reduce((value, func) => func(value) == -7 ? 0 : func(value), 0)
+        return reduceRight(arrayOfFunc, value)
+    } 
+}
+
+function reduceRight (array, func) {
+    if (typeof array[0] == 'string') {
+        return foldRight(array, func, "")
+    } else {
+        return foldRight(array, func, 0)
     }
-    
 }
