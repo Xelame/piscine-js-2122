@@ -45,7 +45,7 @@ function firstDayWeek(week, year) {
         var result  = new Date(year); 
     } else {
         var result  = new Date(year, 0, ((week-1) * 7));
-        for (let decalage = 1; result.getDay() != 1; decalage++) {
+        for (let decalage = 1; result.getDay() > 0; decalage++) {
             result = new Date(year, 0, ((week-1) * 7)-decalage)
         }
     }
