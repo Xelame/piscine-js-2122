@@ -1,10 +1,6 @@
 function flow (arrayOfFunc) {
-    var result = function (value) {
+    return function (value) {
         return arrayOfFunc.reduce((value, func) => func(value) == -7 ? 0 : func(value), value)
     }
-    if (result == -7) {
-        return 0
-    } else {
-        return result
-    }
+    
 }
