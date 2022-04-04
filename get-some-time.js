@@ -65,4 +65,4 @@ function firstDayWeek(week, year) {
 }
 
 
-firstDayWeek(52, '1000')
+firstDayWeek(2, '1000')
