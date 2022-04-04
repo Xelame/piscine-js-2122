@@ -1,5 +1,5 @@
 function sums(n) {
-    if (n <= 1) {
+    if (n < 2) {
         return []
     }
     let partition = new Array(n).fill(0)
@@ -22,16 +22,19 @@ function sums(n) {
         } partition[k + 1] = rem_val
         k += 1
         output.push(partition.filter(val => val !== 0).sort())
-    } for (let j = 0; j < output.length; j++) {
+    } 
+    for (let j = 0; j < output.length; j++) {
         let test = 0
         for (let a = 0; a < output[j].length; a++) {
             test = test + output[j][a]
-        } if (test > n) {
+        } 
+        if (test > n) {
             while (test > n) {
                 test = test - output[j][0]
                 output[j].shift()
             }
         }
-    } return output.sort()
+    } 
+    return output.sort()
 }
 
