@@ -1,4 +1,4 @@
-/*
+
 function firstDayWeek(week,year){
     let time = new Date(year)
     if(week === 1){
@@ -8,37 +8,36 @@ function firstDayWeek(week,year){
     let dayPlus = week*7*24
     time.setHours(dayPlus-123)
         
-        for(let i = 0;i<7;i++){
-            let today = getWeekDay(time)
-            if(today === 'Monday'){
-                let res = formattedDate(time)
-                return res
-            }
-            time.setHours(-24)    
+    for(let i = 0;i<7;i++){
+        let today = getWeekDay(time)
+        if(today === 'Monday'){
+            let res = formattedDate(time)
+            return res
         }
-        return time
+        time.setHours(-24)    
     }
-    function formattedDate(date) {
-        let month = String(date.getMonth() + 1);
-        let day = String(date.getDate()-1);
-        let year = String(date.getFullYear());
-        
-        if (month.length < 2) month = '0' + month;
-        if (day.length < 2) day = '0' + day;
-        if (year.length === 1) year = '000' + year;
-        if (year.length === 2) year = '00' + year;
-        if (year.length === 3) year = '0' + year; 
-        return `${day}-${month}-${year}`;
-    }
+    return time
+}
+function formattedDate(date) {
+    let month = String(date.getMonth() + 1);
+    let day = String(date.getDate()-1);
+    let year = String(date.getFullYear());
+    
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+    if (year.length === 1) year = '000' + year;
+    if (year.length === 2) year = '00' + year;
+    if (year.length === 3) year = '0' + year; 
+    return `${day}-${month}-${year}`;
+}
 
-    function getWeekDay(date) {
-        return days[date.getDay()-1];
-    }
-*/
+function getWeekDay(date) {
+    return days[date.getDay()-1];
+}
 
 let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     
-
+/*
 function firstDayWeek(week, year) {
     var date = new Date(year);
     if (week == 1) {
@@ -66,3 +65,4 @@ function firstDayWeek(week, year) {
 
 
 console.log(firstDayWeek(52, '1000'))
+*/
