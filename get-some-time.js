@@ -1,3 +1,4 @@
+/*
 function firstDayWeek(week,year){
     let time = new Date(year)
     if(week === 1){
@@ -34,13 +35,14 @@ function firstDayWeek(week,year){
         let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         return days[date.getDay()-1];
     }
+*/
     
-/*
+
 function firstDayWeek(week, year) {
-    var date = new Date(year,0, 1);
+    var date = new Date(year);
     console.log(date.getDay());
     if (week == 1) {
-        var result  = new Date(year, 0, ((week-1) * 7)+1); 
+        var result  = new Date(year); 
     } else {
         var result  = new Date(year, 0, ((week-1) * 7));  
     }
@@ -57,4 +59,3 @@ function firstDayWeek(week, year) {
     }
     return `${dayInString}-${weekInString}-${year}`;
 }
-*/
