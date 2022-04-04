@@ -1,6 +1,6 @@
 function flow (arrayOfFunc) {
     return function (value) {
-        return reduceRight(arrayOfFunc, (accumulator, func) => func(accumulator))(value)
+        return reduceRight(arrayOfFunc, value)
     } 
 }
 
