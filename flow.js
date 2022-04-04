@@ -1,6 +1,6 @@
 function flow (arrayOfFunc) {
     return function (value) {
-        return arrayOfFunc.reverse().reduce((value, func) => func(value), 0)
+        return arrayOfFunc.reverse().reduce((value, func) => func(value), value)
     }
     
 }
