@@ -5,13 +5,13 @@ export const getArchitects = () => {
 }
 
 export const getClassical = () => {
-    let classical = document.getElementsByClassName('classical')
-    let other = document.getElementsByClassName(':not(classical)')
+    let classical = document.querySelectorAll('.classical')
+    let other = document.querySelectorAll(':not(.classical)')
     return [classical, other]
 }
 
 export const getActive = () => {
-    let active = document.getSelectionByClassName('active')
+    let active = document ('active')
     let other = document.getSelectionByClassName(':not(active)')
     return [active, other]
 }
