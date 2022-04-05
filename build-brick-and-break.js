@@ -3,6 +3,7 @@ export const build = (number) => {
     const intervalID = setInterval(() => {
         let div = document.createElement('div');
         div.id = `brick-${i}`;
+        div.innerHTML = i
         div.dataset.foundation =  i % 3 == 2 ? true : ''
         document.body.appendChild(div)
 
@@ -12,8 +13,6 @@ export const build = (number) => {
         i++
     }, 100)
 }
-
-
 
 export const destroy = () => {
     let allbricks = document.querySelectorAll('[id^=brick]')
