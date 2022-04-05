@@ -8,11 +8,13 @@ export const pimp = () => {
 
     if (index < styles.length) {
         button.add(styles[index])
-    }
-    if (index == styles.length-1) {
+    } else if (index == styles.length-1) {
         button.add('unpimp')
         isRemove = true
+    } else if (isRemove) {
+        button.remove(button[button.length-2])
     }
+
     if (index != styles.length-1) {
         index++
     }
