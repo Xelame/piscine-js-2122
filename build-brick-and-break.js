@@ -5,6 +5,8 @@ export const build = (number) => {
         div.id = `brick-${i}`;
         if (i % 3 == 2) {
             div.foundation = true
+        } else {
+            div.foundation = false
         }
         document.body.appendChild(div) 
         
