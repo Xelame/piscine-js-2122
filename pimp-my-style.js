@@ -7,7 +7,7 @@ export const pimp = () => {
         let button = document.getElementsByTagName('button')[0]
         button.classList.add(styles[index])
     }
-    if (index >= styles.length) {
+    if (index == styles.length) {
         button.classList.toggle('unpimp')
     }
     if (index != styles.length) {
