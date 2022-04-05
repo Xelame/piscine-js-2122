@@ -10,7 +10,7 @@ export const pimp = () => {
     if (index == styles.length) {
         button.classList.toggle('unpimp')
     }
-    if (index != styles.length) {
+    if (index != styles.length-1) {
         index++
     }
 }
