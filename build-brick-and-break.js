@@ -19,6 +19,9 @@ export const destroy = () => {
     return
 }
 
-export const repair = () => {
-    return
+export const repair = (arrayOfIds) => {
+    for (let i = 0; i < arrayOfIds.length; i++) {
+        const brick = document.getElementById(arrayOfIds[i])
+        brick.setAttribute('repaired', brick.foundation ? true : 'in progress')
+    }
 }
