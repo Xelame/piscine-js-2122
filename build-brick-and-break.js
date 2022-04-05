@@ -4,7 +4,7 @@ export const build = (number) => {
         let div = document.createElement('div');
         div.id = `brick-${i}`;
         if (i % 3 == 2) {
-            div.setAttribute('foundation', 'true');
+            div.setAttribute('foundation', true);
         } 
         document.body.appendChild(div) 
         
