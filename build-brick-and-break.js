@@ -11,7 +11,6 @@ export const build = (number) => {
         }
         i++
     }, 100)
-    console.log(document.querySelectorAll('brick'))
 }
 
 
@@ -24,5 +23,5 @@ export const repair = (arrayOfIds) => {
     console.log(arrayOfIds);
     const brick = document.getElementById(arrayOfIds)
     brick.setAttribute('repaired', brick.foundation ? true : 'in progress')
-
+    console.log(document.querySelectorAll(/brick/))
 }
