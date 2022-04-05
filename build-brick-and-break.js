@@ -16,12 +16,14 @@ export const build = (number) => {
 
 
 export const destroy = () => {
-
+    let allbricks = document.querySelectorAll('[id^=brick]')
+    let lastbrick = allbricks[allbricks.length-1]
+    lastbrick.remove()
 }
 
-export const repair = (arrayOfIds) => {
-    console.log(arrayOfIds);
-    const brick = document.getElementById(arrayOfIds)
-    brick.setAttribute('repaired', brick.foundation ? true : 'in progress')
-    console.log(document.querySelectorAll(/brick/))
+export const repair = (...id) => {
+    for (let index = 0; index < id.length; index++) {
+        const brick = document.getElementById(id[index])
+        brick.setAttribute('repaired', brick.getAttribute("foundation") == "true" ? true : 'in progress')
+    }
 }
