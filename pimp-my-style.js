@@ -1,5 +1,3 @@
-import { styles } from "./pimp-my-style.data.js"
-
 let index = 0
 
 export const pimp = () => {
