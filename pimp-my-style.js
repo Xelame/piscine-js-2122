@@ -1,10 +1,14 @@
 import { styles } from "./pimp-my-style.data.js"
 
 let index = 0
+let isRemove = false
 
 export const pimp = () => {
-    let isRemove = false
     let button = document.getElementsByTagName('button')[0].classList
+    
+    if (isRemove) {
+        button.remove(button[button.length-2])
+    }
     if (index < styles.length) {
         button.add(styles[index])
     }
@@ -15,7 +19,5 @@ export const pimp = () => {
     if (index != styles.length-1) {
         index++
     }
-    if (isRemove) {
-        button.remove(button[button.length-2])
-    }
+    
 }
