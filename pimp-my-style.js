@@ -1,3 +1,5 @@
+import { styles } from "./pimp-my-style.data.js"
+
 let index = 0
 
 export const pimp = () => {
@@ -5,8 +7,8 @@ export const pimp = () => {
     if (index < styles.length) {
         button.classList.add(styles[index])
     }
-    if (index == styles.length) {
-        button.classList.remove(button.classList[button.classList.lenght-1])
+    if (index == styles.length-1) {
+        button.classList.add(styles[index])
         button.classList.toggle('unpimp')
     }
     if (index != styles.length-1) {
