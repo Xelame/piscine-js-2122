@@ -3,12 +3,15 @@ export const build = (number) => {
     const intervalID = setInterval(() => {
         let div = document.createElement('div');
         div.id = `brick-${i}`;
-        div.foundation = (i % 3 === 2)
+        if (i % 3 == 2) {
+            div.foundation = true
+        }
         document.body.appendChild(div) 
-        i++
-        if (number < i) {
+        
+        if (number === i) {
             clearInterval(intervalID)
         }
+        i++
     }, 100)
 }
 
