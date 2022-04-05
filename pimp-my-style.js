@@ -4,7 +4,7 @@ let index = 0
 
 export const pimp = () => {
     let button = document.getElementsByTagName('button')[0].classList
-    if (index <= styles.length) {
+    if (index < styles.length) {
         button.add(styles[index])
     }
     if (index == styles.length) {
