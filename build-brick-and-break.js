@@ -24,6 +24,6 @@ export const destroy = () => {
 export const repair = (...id) => {
     for (let index = 0; index < id.length; index++) {
         const brick = document.getElementById(id[index])
-        brick.setAttribute('repaired', brick.getAttribute("data-foundation") ? true : 'in progress')
+        brick.dataset.repaired = brick.getAttribute("data-foundation") ? true : 'in progress'
     }
 }
