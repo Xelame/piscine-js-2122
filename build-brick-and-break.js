@@ -3,7 +3,12 @@ export const build = (number) => {
     const intervalID = setInterval(() => {
         let div = document.createElement('div');
         div.id = `brick-${i}`;
-        div.setAttribute('foundation', i % 3 == 2);
+        if (i % 3 == 2) {
+            div.setAttribute('foundation', 'true');
+        } else {
+            div.setAttribute('foundation', '');
+        }
+        
         document.body.appendChild(div)
 
         if (number === i) {
@@ -24,6 +29,6 @@ export const destroy = () => {
 export const repair = (...id) => {
     for (let index = 0; index < id.length; index++) {
         const brick = document.getElementById(id[index])
-        brick.setAttribute('repaired', brick.getAttribute("foundation") == "true" ? true : 'in progress')
+        brick.setAttribute('repaired', brick.getAttribute("foundation") ? true : 'in progress')
     }
 }
