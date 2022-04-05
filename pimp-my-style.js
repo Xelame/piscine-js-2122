@@ -5,10 +5,7 @@ let isRemove = false
 
 export const pimp = () => {
     let button = document.getElementsByTagName('button')[0].classList
-    
-    if (isRemove) {
-        button.remove(button[button.length-2])
-    }
+
     if (index < styles.length) {
         button.add(styles[index])
     }
