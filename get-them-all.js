@@ -17,7 +17,7 @@ export const getActive = () => {
 }
 
 export const getBonannoPisano = () => {
-    let bonannoPisano = document.querySelectorAll('#BonannoPisano')
+    let bonannoPisano = document.querySelector('#BonannoPisano')
     let other = document.querySelectorAll(':not(#BonannoPisano)')
     return [bonannoPisano, other]
 }
