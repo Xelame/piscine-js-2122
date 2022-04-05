@@ -4,11 +4,10 @@ let index = 0
 
 export const pimp = () => {
     let button = document.getElementsByTagName('button')[0]
-    if (index < styles.length) {
+    if (index <+ styles.length) {
         button.classList.add(styles[index])
     }
     if (index == styles.length-1) {
-        button.classList.add(styles[index])
         button.classList.add('unpimp')
     }
     if (index != styles.length-1) {
