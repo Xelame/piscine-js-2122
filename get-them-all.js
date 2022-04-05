@@ -11,8 +11,8 @@ export const getClassical = () => {
 }
 
 export const getActive = () => {
-    let active = document ('active')
-    let other = document.getSelectionByClassName(':not(active)')
+    let active = document.querySelectorAll('.classical.active')
+    let other = document.querySelectorAll(':not(active)')
     return [active, other]
 }
 
