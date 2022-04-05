@@ -1,6 +1,6 @@
 export const getArchitects = () => {
-    let architects = document.getElementsByTagName('a')
-    let other = document.getElementsByTagName('span')
+    let architects = document.querySelectorAll('.architect');
+    let other = document.querySelectorAll(':not(.architect)');
     return [architects, other]
 }
 
