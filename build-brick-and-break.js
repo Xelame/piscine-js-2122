@@ -21,7 +21,7 @@ export const destroy = () => {
 
 export const repair = (arrayOfIds) => {
     for (let i = 0; i < arrayOfIds.length; i++) {
-        console.log(`brick-${arrayOfIds[i]}`)
+        console.log(`brick-${arrayOfIds}`)
         const brick = document.getElementById(`brick-${arrayOfIds[i]}`)
         brick.setAttribute('repaired', brick.foundation ? true : 'in progress')
     }
