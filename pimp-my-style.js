@@ -7,11 +7,11 @@ export const pimp = () => {
     if (index <= styles.length) {
         button.add(styles[index])
     }
-    if (index == styles.length-1) {
+    if (index == styles.length) {
         button.add('unpimp')
         button.remove(button[button.length-2])
     }
-    if (index != styles.length-1) {
+    if (index != styles.length) {
         index++
     }
 }
