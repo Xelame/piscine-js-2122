@@ -8,9 +8,9 @@ export const generateLetters = () => {
         let div = document.createElement('div')
         div.textContent = `${alphabet[getRandomInt(alphabet.length-1)]}`
         div.style.fontSize = `${10+i}px`
-        if (i < 120/3) {
+        if (i <= 120/3) {
             div.style.fontWeight = 300
-        } else if (i <120/3*2) {
+        } else if (i <= 120/3*2) {
             div.style.fontWeight = 400
         } else {
             div.style.fontWeight = 600
