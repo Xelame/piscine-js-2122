@@ -16,7 +16,7 @@ export const pimp = () => {
     
     if (classbutton.length-1 == styles.length) {
         classbutton.add('unpimp')
-    } else if (classbutton == ['button', "unpimp"]){
+    } else if (classbutton.length == 2) {
         classbutton.remove('unpimp')
     }
     
