@@ -1,26 +1,21 @@
 import { styles } from "./pimp-my-style.data.js"
 
 let index = 0
-let isRemove = false
 
 export const pimp = () => {
-    let button = document.getElementsByTagName('button')[0].classList
+    let classbutton = document.getElementsByTagName('button')[0].classList
 
-    
 
-    if (index == styles.length-1) {
-        button.add('unpimp')
-        isRemove = true
+    if (classbutton.length-1 == styles.length) {
+        classbutton.toggle('unpimp')
     } 
     
-    if (index < styles.length) {
-        button.add(styles[index])
-    } else if (isRemove) {
-        button.remove(button[button.length-2])
-    }
-
-    if (index != styles.length-1) {
+    
+    if (classbutton[classbutton.length-1] != 'unpimp') {
+        classbutton.add(styles[index])
         index++
+    } else {
+        classbutton.remove(classbutton.length-2)
     }
     
 }
