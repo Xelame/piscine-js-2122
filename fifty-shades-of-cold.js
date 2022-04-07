@@ -1,6 +1,6 @@
 import { colors } from "./fifty-shades-of-cold.data.js"
 
-const coldShades = ["aqua", "blue", "turquoise", "green", "cyan", "navy", "purple"]
+const coldShades = ["aqua", "blue", "turquoise", "green", "cyan", "navy", "purple", "white"]
 
 export const generateClasses = () => {
     colors.reverse().forEach((color) => {
@@ -23,6 +23,9 @@ export const generateColdShades = () => {
             div.className = color
             div.innerHTML = color
             document.body.appendChild(div)
+        } else {
+            let style = document.getElementById(color)
+            style.remove()
         }
     })
 }
