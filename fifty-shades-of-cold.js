@@ -17,7 +17,7 @@ export const generateClasses = () => {
 }
 
 export const generateColdShades = () => {
-    colors.forEach((color) => {
+    colors.reverse().forEach((color) => {
         if(coldShades.some((cold) => RegExp(`${cold}`).test(color))) {
             let div = document.createElement('div')
             div.className = color
