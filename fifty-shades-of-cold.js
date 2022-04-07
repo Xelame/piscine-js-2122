@@ -1,6 +1,6 @@
 import { colors } from "./fifty-shades-of-cold.data.js"
 
-const coldShades = ["aqua", "blue", "turquoise", "green", "cyan", "navy", "purple", "white"]
+const coldShades = ["aqua", "blue", "turquoise", "green", "cyan", "navy", "purple"]
 
 export const generateClasses = () => {
     colors.reverse().forEach((color) => {
