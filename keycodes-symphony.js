@@ -4,14 +4,17 @@ export const compose = () => {
             let div = document.createElement('div')
             div.classList.add('note')
             div.innerHTML = event.key
+            document.body.appendChild(div)
         }
         if (event.key == 'Backspace') {
             let div = document.getElementsByClassName('note')[0]
             div.remove()
         }
         if (event.key == 'Enter') {
-            let div = document.getElementsByClassName('note')[0]
-            div.classList.add('note-enter')
+            let divs = document.querySelectorAll('.note')
+            for (let i = 0; i < divs.length; i++) {
+                divs[i].remove()
+            }
         }
     }
 }
