@@ -20,9 +20,7 @@ export const generateColdShades = () => {
         let div = document.createElement('div')
         div.className = color
         div.innerHTML = color
-        coldShades.forEach((cold) => {
-            RegExp(`${cold}`).test(color) ? document.body.appendChild(div) : ''
-        })
+        coldShades.some((cold) => RegExp(`${cold}`).test(color)) ? document.appendChild(div) : div.remove()
     })
 }
 
