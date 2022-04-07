@@ -17,10 +17,12 @@ export const generateClasses = () => {
 
 export const generateColdShades = () => {
     colors.forEach((color) => {
-        let div = document.createElement('div')
-        div.className = color
-        div.innerHTML = color
-        coldShades.some((cold) => RegExp(`${cold}`).test(color)) ? document.body.appendChild(div) : div.remove()
+        if(coldShades.some((cold) => RegExp(`${cold}`).test(color))) {
+            let div = document.createElement('div')
+            div.className = color
+            div.innerHTML = color
+            document.body.appendChild(div)
+        }
     })
 }
 
