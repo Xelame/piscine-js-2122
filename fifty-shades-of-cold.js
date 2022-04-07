@@ -23,9 +23,6 @@ export const generateColdShades = () => {
             div.className = color
             div.innerHTML = color
             document.body.appendChild(div)
-        } else {
-            let style = document.getElementById(color)
-            style.remove()
         }
     })
 }
