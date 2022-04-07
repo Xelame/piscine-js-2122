@@ -7,8 +7,8 @@ export const compose = () => {
             document.body.appendChild(div)
         }
         if (event.key == 'Backspace') {
-            let div = document.getElementsByClassName('note')[0]
-            div.remove()
+            let divs = document.querySelectorAll('.note')
+            divs[divs.length-1].remove()
         }
         if (event.key == 'Enter') {
             let divs = document.querySelectorAll('.note')
