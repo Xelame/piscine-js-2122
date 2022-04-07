@@ -3,10 +3,8 @@ import { colors } from "./fifty-shades-of-cold.data.js"
 const coldShades = ["aqua", "blue", "turquoise", "green", "cyan", "navy", "purple"]
 
 export const generateClasses = () => {
-    colors.reverse().forEach((color) => {
-        let style = document.createElement('style')
-        style.id = color
-        document.head.appendChild(style)
+    let style = document.createElement('style')
+    colors.forEach((color) => {  
         if (style.styleSheet) {
             // This is required for IE8 and below.
             style.styleSheet.cssText = `.${color} {background : ${color};}`;
@@ -14,18 +12,16 @@ export const generateClasses = () => {
             style.appendChild(document.createTextNode(`.${color} {background : ${color};}`));
         }
     })
+    document.head.appendChild(style)
 }
 
 export const generateColdShades = () => {
-    colors.reverse().forEach((color) => {
+    colors.forEach((color) => {
         if(coldShades.some((cold) => RegExp(`${cold}`).test(color))) {
             let div = document.createElement('div')
             div.className = color
             div.innerHTML = color
             document.body.appendChild(div)
-        } else {
-            let style = document.getElementById(color)
-            style.remove()
         }
     })
 }
