@@ -21,13 +21,15 @@ export const generateColdShades = () => {
         div.className = color
         div.innerHTML = color
         coldShades.forEach((cold) => {
-            if (div.classList.forEach((class) => {
-                class.contains(cold)
-            }
+            RegExp(`${cold}`).test(color) ? document.body.appendChild(div) : ''
         })
     })
 }
 
 export const choseShade = (shade) => {
-    return
+    let divs = document.querySelectorAll('div')
+    for (let index = 0; index < divs.length; index++) {
+        const div = divs[index]
+        div.className = shade
+    }
 }
