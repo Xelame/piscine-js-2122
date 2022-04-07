@@ -10,7 +10,7 @@ export const compose = () => {
             let divs = document.querySelectorAll('.note')
             divs[divs.length-1].remove()
         }
-        if (event.key == 'Enter') {
+        if (event.key == 'Escape') {
             let divs = document.querySelectorAll('.note')
             for (let i = 0; i < divs.length; i++) {
                 divs[i].remove()
