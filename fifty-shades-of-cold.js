@@ -5,6 +5,7 @@ const coldShades = ["aqua", "blue", "turquoise", "green", "cyan", "navy", "purpl
 export const generateClasses = () => {
     colors.forEach((color) => {
         let style = document.createElement('style')
+        style.className = color
         document.head.appendChild(style)
         if (style.styleSheet) {
             // This is required for IE8 and below.
@@ -22,6 +23,9 @@ export const generateColdShades = () => {
             div.className = color
             div.innerHTML = color
             document.body.appendChild(div)
+        } else {
+            let style = document.head.getElementsByClassName(color)[0]
+            style.remove()
         }
     })
 }
