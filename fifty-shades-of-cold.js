@@ -3,7 +3,7 @@ import { colors } from "./fifty-shades-of-cold.data.js"
 const coldShades = ["aqua", "blue", "turquoise", "green", "cyan", "navy", "purple"]
 
 export const generateClasses = () => {
-    colors.forEach((color) => {
+    colors.reverse().forEach((color) => {
         let style = document.createElement('style')
         style.className = color
         document.head.appendChild(style)
