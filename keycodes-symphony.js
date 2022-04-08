@@ -1,10 +1,10 @@
 export const compose = () => {
-    document.onkeydown = event => {
+    document.onkeyup = (event) => {
         if ('a' <= event.key && event.key <= 'z' || ' ' == event.key) {
             let div = document.createElement('div')
             div.classList.add('note')
             div.innerHTML = event.key
-            div.style.backgroundColor = `rgb(100, ${event.key.charCodeAt(0)}, 100);`
+            div.style = `background: rgb(100, ${event.key.charCodeAt(0)}, 100);`
             document.body.appendChild(div)
         }
         if (event.key == 'Backspace') {
