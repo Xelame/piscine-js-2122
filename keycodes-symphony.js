@@ -3,7 +3,7 @@ export const compose = () => {
         if ('a' <= event.key && event.key <= 'z' || ' ' == event.key) {
             let div = document.createElement('div')
             div.classList.add('note')
-            div.innerHTML = event.key
+            div.textContent = event.key
             div.style = `background: rgb(100, ${event.key.charCodeAt(0)}, 100);`
             document.body.appendChild(div)
         }
