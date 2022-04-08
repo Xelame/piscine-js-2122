@@ -33,11 +33,10 @@ const follow = (e) => {
             div.style.background = "var(--purple)"
             isTrap = true
         }
-        if (!isTrap) {
         div.style.top = `${e.clientY - 25}px`
         div.style.left = `${e.clientX - 25}px`
-        } else {
-            console.log('trapped')
+        if (isTrap) {
+            console.log(div.getBoundingClientRect(), box.getBoundingClientRect())
             TrapPosition(div, box)
         }
     }
@@ -57,15 +56,15 @@ const TrapPosition = (circle, box) => {
     let circleRect = circle.getBoundingClientRect()
     let boxRect = box.getBoundingClientRect()
     if (circleRect.left < boxRect.left) {
-        circle.style.left = `${boxRect.left-1}px`
+        circle.style.left = `${boxRect.left+1}px`
     } 
     if (circleRect.right > boxRect.right) {
-        circle.style.left = `${boxRect.right-1}px`
+        circle.style.left = `${boxRect.right-51}px`
     } 
     if (circleRect.top < boxRect.top) {
-        circle.style.top = `${boxRect.top-1}px`
+        circle.style.top = `${boxRect.top+1}px`
     } 
     if (circleRect.bottom > boxRect.bottom) {
-        circle.style.top = `${boxRect.bottom-1}px`
+        circle.style.top = `${boxRect.bottom-51}px`
     }
 }
