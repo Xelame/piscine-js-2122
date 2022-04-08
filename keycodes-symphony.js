@@ -1,5 +1,5 @@
 export const compose = () => {
-    document.onkeyup = (event) => {
+    document.onkeydown = (event) => {
         if ('a' <= event.key && event.key <= 'z' || ' ' == event.key) {
             let div = document.createElement('div')
             div.classList.add('note')
