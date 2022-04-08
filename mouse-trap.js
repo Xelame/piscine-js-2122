@@ -3,14 +3,7 @@ let isTrap = false
 export const createCircle = () => {
     document.body.addEventListener("click", (e) => {    
         let div = document.createElement('div')
-        let box = document.getElementsByTagName('box')[0]
-        if (isInBox(div, box)) {
-            div.style.background = "var(--purple)"
-            isTrap = true
-        } else {
-            div.style.background = 'white'
-            isTrap = false
-        }
+        div.style.background = 'white'
         div.style.top = `${e.clientY - 25}px`
         div.style.left = `${e.clientX - 25}px`
         div.className = "circle"
@@ -42,6 +35,7 @@ const follow = (e) => {
         div.style.top = `${e.clientY - 25}px`
         div.style.left = `${e.clientX - 25}px`
         if (isTrap) {
+            console.log(div.getBoundingClientRect(), box.getBoundingClientRect())
             TrapPosition(div, box)
         }
     }
