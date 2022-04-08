@@ -1,7 +1,8 @@
 let isTrap = false
 
 export const createCircle = () => {
-    document.body.addEventListener("click", (e) => {    
+    document.body.addEventListener("click", (e) => {
+        isTrap = false 
         let div = document.createElement('div')
         div.style.background = 'white'
         div.style.top = `${e.clientY - 25}px`
@@ -35,7 +36,6 @@ const follow = (e) => {
         div.style.top = `${e.clientY - 25}px`
         div.style.left = `${e.clientX - 25}px`
         if (isTrap) {
-            console.log(div.getBoundingClientRect(), box.getBoundingClientRect())
             TrapPosition(div, box)
         }
     }
