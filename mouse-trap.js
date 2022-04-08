@@ -22,15 +22,24 @@ export const setBox = () => {
 
 
 const follow = (e) => {
-    let divs2 = document.getElementsByTagName('div')
-    if (divs2.length) {
-        let div = divs2[divs2.length - 1]
+    let divs = document.getElementsByTagName('div')
+    let box = document.getElementsByTagName('box')[0]
+    if (divs.length) {
+        let div = divs[divs.length - 1]
+        if (isInBox(div, box)) {
+            div.style.background = "var(--purple)"
+        }
         div.style.top = `${e.clientY - 25}px`
         div.style.left = `${e.clientX - 25}px`
-        let box = document.getElementsByTagName('box')[0]
-        box.addEventListener("mouseover", (e) => {
-            console.log(e.clientX, e.clientY)
-            div.style.background = "var(--purple)"
-        })
     }
+}
+
+
+const isInBox = (circle, box) => {
+    let circleRect = circle.getBoundingClientRect()
+    let boxRect = box.getBoundingClientRect()
+    if (circleRect.left > boxRect.left && circleRect.top > boxRect.top && circleRect.bottom < boxRect.bottom && circleRect.right < boxRect.right) {
+        return true
+    }
+    return false
 }
