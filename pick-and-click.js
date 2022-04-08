@@ -24,6 +24,9 @@ export const pick = () => {
         divhue.textContent = `hue\n ${hue}`
         divluminosity.textContent = `${luminosity}\nluminosity`
     })
+    document.body.addEventListener('click', (e) => {
+        navigator.clipboard.writeText(`hsl(${hue}, 50%, ${luminosity}%)`)
+    })
     divhsl.className = 'hsl text'
     divhue.className = 'hue text'
     divluminosity.className = 'luminosity text'
