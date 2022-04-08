@@ -19,7 +19,7 @@ export const pick = () => {
         axisY.setAttribute('y2', e.clientY)
         hue = Math.round(e.clientX / window.innerWidth * 360)
         luminosity = Math.round(e.clientY / window.innerHeight * 100)
-        document.body.style.backgroundColor = `hsl(${hue}, 50%, ${luminosity}%)`
+        document.body.style.background = `hsl(${hue}, 50%, ${luminosity}%)`
         divhsl.textContent = `hsl(${hue}, 50%, ${luminosity}%)`
         divhue.textContent = `hue\n ${hue}`
         divluminosity.textContent = `${luminosity}\nluminosity`
