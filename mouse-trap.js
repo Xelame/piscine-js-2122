@@ -1,8 +1,7 @@
 let isTrap = false
 
 export const createCircle = () => {
-    document.body.addEventListener("click", (e) => {
-        isTrap = false
+    document.body.addEventListener("click", (e) => {    
         let div = document.createElement('div')
         div.style.background = 'white'
         div.style.top = `${e.clientY - 25}px`
