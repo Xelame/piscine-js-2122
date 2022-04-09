@@ -11,7 +11,7 @@ const fusion = (...objects) => {
         })
         newObject[key] = sum
     })
-    console.log(newObject)
+    return newObject
 }
 
 const Join = (sum, newValue) => {
@@ -32,5 +32,3 @@ const Join = (sum, newValue) => {
     }
     return sum
 }
-
-fusion({ a: 10, b: 8, c: "hello", e: [2] }, { a: 10, b: [2, 8] }, {c: "Alex", e: [5, 9]})
