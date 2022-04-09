@@ -16,11 +16,11 @@ const mapKeys = (object, func) => {
     return newObject
 }
 
-const reduceKeys = (object, func) => {
+const reduceKeys = (object, func, acc = '') => {
     let accumulator
     for (let i in object) {
         if (!accumulator) {
-            accumulator = i
+            accumulator = acc + i
         } else {
             accumulator = func(accumulator, i)
         }
