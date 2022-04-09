@@ -30,3 +30,6 @@ const reduceEntries = (object, func, acc) => {
 const totalCalories = (groceriesCart) => Math.round((reduceEntries(groceriesCart, (acc, [key, value]) => acc + nutritionDB[key].calories*value/100, 0))*10)/10
 
 const lowCarbs = (groceriesCart) => filterEntries(groceriesCart, ([key,value]) => nutritionDB[key].carbs * value/100 < 50)
+
+const cartTotal = (groceriesCart) => mapEntries(groceriesCart, ([key, value]) => [key, mapEntries(nutritionDB[key], ([keyCart, valueCart]) => [keyCart, parseFloat((valueCart*value/100).toFixed(3))])])
+
