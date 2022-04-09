@@ -16,7 +16,7 @@ const mapKeys = (object, func) => {
     return newObject
 }
 
-const reduceKeys = (object, func, acc = 0) => {
+const reduceKeys = (object, func, acc = '') => {
     let accumulator = acc
     for (let i in object) {
         accumulator = func(accumulator, i)
