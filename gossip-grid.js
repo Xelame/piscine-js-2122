@@ -56,7 +56,9 @@ export const grid = () => {
     rangeBackground.value = ''
     rangeBackground.id = 'background'
     rangeBackground.addEventListener('input', () => {
-        document.body.style.background = `hsl(0, 0%, ${rangeBackground.value}%)`
+        document.querySelectorAll('.gossip').forEach(gossip => {
+            gossip.style.background = `hsl(280, 50%, ${rangeBackground.value}%)`
+        })
     })
     ranges.appendChild(rangeBackground)
 
