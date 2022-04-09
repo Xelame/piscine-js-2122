@@ -20,7 +20,7 @@ const reduceKeys = (object, func, acc = '') => {
     let accumulator
     for (let i in object) {
         if (!accumulator) {
-            accumulator = acc + i
+            accumulator = acc + func(accumulator, i)
         } else {
             accumulator = func(accumulator, i)
         }
