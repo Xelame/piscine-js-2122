@@ -10,7 +10,7 @@ const gossips = [
     `Paulina Porizkova feels betrayed after being cut out of husband Ric Ocasek's will`,
     `From too hot to not: Paris Hilton and Chris Zylka's relationship history`,
     `No bite in the big apple? Celine Dion looks scary skinny in New York`,
-    `Jennifer Aniston and Brad FPitt relationship timeline`,
+    `Jennifer Aniston and Brad Pitt relationship timeline`,
     `They shouldn’t have said that: 10 celebrity rants heard around the world`,
     `The most intense celebrity fights on set`,
     `The 18 most bitter real housewives feuds`,
