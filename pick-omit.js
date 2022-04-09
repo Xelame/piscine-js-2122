@@ -12,12 +12,16 @@ export const pick = (object, string) => {
 
 export const omit = (object = {}, string) => {
     let newObject = {}
-    if (typeof string === 'string') {
-        object.hasOwnProperty(string) ? null : newObject[string] = object[string]
-    } else {
-        string.forEach(s => {
-            object.hasOwnProperty(s) ? null : newObject[s] = object[s]
-        })
-    }
+    for (let key in object) {
+        if (typeof string === 'string') {
+            if (key !== string) {
+                newObject[key] = object[key]
+            }
+        } else {
+            if (!string.includes(key)) {
+                newObject[key] = object[key]
+            }
+        }
+    }  
     return newObject
 }
