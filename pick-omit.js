@@ -19,5 +19,5 @@ export const omit = (object = {}, string) => {
             object.hasOwnProperty(s) ? null : newObject[s] = object[s]
         })
     }
-    return newObject
+    return newObject == {} ? object : newObject
 }
