@@ -1,9 +1,10 @@
 const defaultCurry = (a) => (b) => {
     let newObject = {}
     for (let [key, value] of Object.entries(b)) {
-        if (!b.hasOwnProperty(key)) {
-            newObject[key] = a[key]
-        } else {
+        newObject[key] = value
+    }
+    for (let [key, value] of Object.entries(a)) {
+        if (!newObject.hasOwnProperty(key)) {
             newObject[key] = value
         }
     }
@@ -21,7 +22,7 @@ const mapCurry = (func) => (object) => {
 const reduceCurry = (func) => (object) => {
     let acc = 0
     for (let [key, value] of Object.entries(object)) {
-            acc = func(acc, [key, value])
+        acc = func(acc, [key, value])
     }
     return acc
 }
