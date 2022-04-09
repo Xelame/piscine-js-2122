@@ -25,6 +25,4 @@ export const omit = (object = {}, string) => {
     }
     return newObject
 }
-
-const Join = (...objects, key) => {
     
