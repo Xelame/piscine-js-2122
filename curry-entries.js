@@ -19,10 +19,13 @@ const mapCurry = (func) => (object) => {
     return Object.fromEntries(newMap)
 }
 
-const reduceCurry = (func) => (object) => {
-    let acc = 0
+const reduceCurry = (func) => (object, acc) => {
     for (let [key, value] of Object.entries(object)) {
-        acc = func(acc, [key, value])
+        if (acc == undefined) {
+            acc = i
+        } else {
+            acc = func(acc, [key, value])
+        }
     }
     return acc
 }
