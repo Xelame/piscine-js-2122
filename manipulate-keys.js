@@ -24,5 +24,5 @@ const reduceKeys = (object, func, acc) => {
             acc = func(acc, i)
         }
     }
-    return accumulator
+    return acc
 }
