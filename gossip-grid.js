@@ -16,7 +16,7 @@ const gossips = [
     `The 18 most bitter real housewives feuds`,
     `Tristan Thompson's remarkable transformation from skinny teen to hulking NBA ace`,
     `Kim Kardashian 'considers leaving home' with Kanye West to 'save marriage'`,
-  ]
+]
 
 export const grid = () => {
     const ranges = document.createElement('div')
