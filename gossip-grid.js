@@ -30,7 +30,7 @@ export const grid = () => {
     rangeWidth.id = 'width'
     rangeWidth.addEventListener('input', () => {
         document.querySelectorAll('.gossip').forEach(gossip => {
-            gossip.style.width = rangeWidth.value + 'px'
+            gossip.style.width = `${rangeWidth.value}px`
         })
     })
     ranges.appendChild(rangeWidth)
