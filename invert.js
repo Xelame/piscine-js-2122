@@ -1,7 +1,13 @@
 export const invert = (object) => {
     const invert = {}
     for (let key in object) {
-        invert[object[key]] = key
+        if (typeof object[key] === 'object') {
+            for (let prototype in object[key]) {
+                invert[object[key][prototype]] = key
+            }
+        } else {
+            invert[object[key]] = key
+        }
     }
     return invert
 }
