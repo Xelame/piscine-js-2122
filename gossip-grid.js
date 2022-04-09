@@ -1,3 +1,6 @@
+import { gossips } from "./gossip-grid.data"
+
+
 export const grid = () => {
     const ranges = document.createElement('div')
     ranges.classList.add('ranges')
