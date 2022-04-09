@@ -15,13 +15,16 @@ export const omit = (object = {}, string) => {
     for (let key in object) {
         if (typeof string === 'string') {
             if (key !== string) {
-                newObject[key] = object[key]
+                object[key] != object.__proto__[key] ? newObject[key] = object[key] : null
             }
         } else {
             if (!string.includes(key)) {
-                newObject[key] = object[key]
+                object[key] != object.__proto__[key] ? newObject[key] = object[key] : null
             }
         }
     }
     return newObject
 }
+
+const Join = (...objects, key) => {
+    
