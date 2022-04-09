@@ -13,15 +13,13 @@ export const pick = (object, string) => {
 export const omit = (object = {}, string) => {
     let newObject = {}
     for (let key in object) {
-        if (object.key != object.__proto__.key) {
-            if (typeof string === 'string') {
-                if (key !== string) {
-                    newObject[key] = object[key]
-                }
-            } else {
-                if (!string.includes(key)) {
-                    newObject[key] = object[key]
-                }
+        if (typeof string === 'string') {
+            if (key !== string) {
+                newObject[key] = object[key]
+            }
+        } else {
+            if (!string.includes(key)) {
+                newObject[key] = object[key]
             }
         }
     }

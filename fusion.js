@@ -1,10 +1,6 @@
 const fusion = (...objects) => {
-    let finaleObject = {}
     for (let i in objects) {
-        let object = objects[i]
-        for (let key in object) {
-            finaleObject[key] = object[key] 
-        }
+        console.log(objects[i].c)
     }
 }
 
