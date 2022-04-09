@@ -1,7 +1,7 @@
 const filterEntries = (object, func) => {
     let newObject = {}
     for (let [key, value] in Object.entries(object)) {
-        if (func(key, value)) {
+        if (func([key, value])) {
             newObject[key] = value
         }
     }
