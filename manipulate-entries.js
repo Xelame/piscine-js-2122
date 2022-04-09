@@ -1,4 +1,4 @@
-const filterValues = (object, func) => {
+const filterEntries = (object, func) => {
     let newObject = {}
     for (let [key, value] in Object.entries(object)) {
         if (func(key, value)) {
@@ -8,18 +8,18 @@ const filterValues = (object, func) => {
     return newObject
 }
 
-const mapValues = (object, func) => {
+const mapEntries = (object, func) => {
     const newObject = {}
     for (let [key, value] in Object.entries(object)) {
-        newObject[i] = func(object[i])
+        newObject[key] = func(value)
     }
     return newObject
 }
 
-const reduceValues = (object, func, acc = 0) => {
+const reduceEntries = (object, func, acc = 0) => {
     let accumulator = acc
     for (let [key, value] in Object.entries(object)) {
-        accumulator = func(accumulator, object[i])
+        accumulator = func(accumulator, value)
     }
     return accumulator
 }
