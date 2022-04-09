@@ -1,8 +1,9 @@
 const defaultCurry = (a) => (b) => {
+    let newObject = new Object(a)
     for (let [key, value] of Object.entries(b)) {
-        a[key] = value
+        newObject[key] = value
     }
-    return a
+    return newObject
 }
 
 const mapCurry = (func) => (object) => {
