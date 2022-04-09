@@ -22,7 +22,7 @@ const mapCurry = (func) => (object) => {
 const reduceCurry = (func) => (object, acc) => {
     for (let [key, value] of Object.entries(object)) {
         if (acc == undefined) {
-            acc = i
+            acc = value
         } else {
             acc = func(acc, [key, value])
         }
@@ -39,3 +39,5 @@ const filterCurry = (func) => (object) => {
     }
     return newObject
 }
+
+const reduceScore = (objects, acc) =>  reduceCurry((acc, [, value]) => (acc += value.pilotingScore + value.shootingScore))(filterCurry(([, v]) => v.isForceUser)(objects), acc)
