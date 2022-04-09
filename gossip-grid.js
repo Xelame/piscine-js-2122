@@ -53,6 +53,15 @@ export const grid = () => {
     const button = document.createElement('button')
     button.type = 'submit'
     button.textContent = 'Share gossip!'
+    button.addEventListener('click', (e) => {
+        let gossipadded = document.createElement('div')
+        gossipadded.classList.add('gossip')
+        gossipadded.textContent = textarea.value
+        document.body.insertBefore(gossipadded, document.querySelectorAll('.gossip')[1])
+        textarea.value = ''
+        e.preventDefault()
+
+    })
     document.body.appendChild(form)
     form.appendChild(button)
 
