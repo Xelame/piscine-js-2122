@@ -16,17 +16,17 @@ const mapEntries = (object, func) => {
     return Object.fromEntries(newMap)
 }
 
-const reduceEntries = (object, func, acc = 0) => {
-    let accumulator = acc
-    for (let [key, value] in Object.entries(object)) {
-        accumulator = func(accumulator, value)
+const reduceEntries = (object, func, acc) => {
+    for (let [key, value] of Object.entries(object)) {
+        if (acc == undefined) {
+            acc = i
+        } else {
+            acc = func(acc, [key, value])
+        }
     }
-    return accumulator
+    return acc
 }
 
 const groceriesCart1 = { oil: 500, onion: 230, garlic: 220, paprika: 480 }
 
-console.log(mapEntries(groceriesCart1, ([k, v]) => [
-    v > 250 ? `✔️${k}` : `❌${k}`,
-    v - 250,
-]))
+console.log(reduceEntries(groceriesCart1, (acc, [k, v]) => acc + k + v, ''))
