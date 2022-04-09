@@ -23,7 +23,7 @@ export const grid = () => {
     rangeFontSize.min = '20'
     rangeFontSize.max = '40'
     rangeFontSize.value = ''
-    rangeFontSize.id = 'font-size'
+    rangeFontSize.id = 'fontSize'
     rangeFontSize.addEventListener('input', () => {
         document.querySelectorAll('.gossip').forEach(gossip => {
             gossip.style.fontSize = `${rangeFontSize.value}px`
