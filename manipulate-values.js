@@ -1,7 +1,7 @@
 const filterValues = (object, func) => {
     let newObject = {}
     for (let i in object) {
-        if (func(object[i], i)) {
+        if (func(object[i])) {
             newObject[i] = object[i]
         }
     }
@@ -16,8 +16,8 @@ const mapValues = (object, func) => {
     return newObject
 }
 
-const reduceValues = (object, func) => {
-    let accumulator = 0
+const reduceValues = (object, func, acc = 0) => {
+    let accumulator = acc
     for (let i in object) {
         accumulator = func(accumulator, object[i])
     }
