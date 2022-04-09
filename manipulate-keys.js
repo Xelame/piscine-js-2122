@@ -18,7 +18,7 @@ const mapKeys = (object, func) => {
 
 const reduceKeys = (object, func, acc) => {
     for (let i in object) {
-        if (!acc) {
+        if (acc == undefined) {
             acc = i
         } else {
             acc = func(acc, i)
