@@ -1,7 +1,11 @@
 const defaultCurry = (a) => (b) => {
-    let newObject = new Object(a)
+    let newObject = {}
     for (let [key, value] of Object.entries(b)) {
-        newObject[key] = value
+        if (!b.hasOwnProperty(key)) {
+            newObject[key] = a[key]
+        } else {
+            newObject[key] = value
+        }
     }
     return newObject
 }
