@@ -1,1 +1,1 @@
-export const pick = (object, array) => {
+export const pick = (object, ...string) => {

@@ -1,7 +1,7 @@
 export const invert = (object) => {
     const invert = {}
     for (let key in object) {
-        console.log( object[key] === object.__proto__)
+        console.log( object[key] === object.__proto__[key])
         if (object[key] !== object.__proto__) {
             invert[object[key]] = key
         }
