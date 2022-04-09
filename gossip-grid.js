@@ -42,7 +42,7 @@ export const grid = () => {
     rangeFontSize.id = 'font-size'
     rangeFontSize.addEventListener('input', () => {
         document.querySelectorAll('.gossip').forEach(gossip => {
-            gossip.style.fontSize = `${document.getElementById('font-size').value}px`
+            gossip.style.fontSize = `${rangeFontSize.value}px`
         })
     })
     ranges.appendChild(rangeFontSize)
@@ -53,7 +53,7 @@ export const grid = () => {
     rangeBackground.max = '75'
     rangeBackground.id = 'background'
     rangeBackground.addEventListener('input', () => {
-        document.body.style.background = `hsl(0, 0%, ${document.getElementById('background').value}%)`
+        document.body.style.background = `hsl(0, 0%, ${rangeBackground.value}%)`
     })
     ranges.appendChild(rangeBackground)
 
