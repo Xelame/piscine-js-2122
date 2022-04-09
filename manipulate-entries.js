@@ -11,7 +11,6 @@ const filterEntries = (object, func) => {
 const mapEntries = (object, func) => {
     const newMap = []
     for (let [key, value] of Object.entries(object)) {
-        console.log(func([key, value]))
         newMap.push(func([key, value]))
     }
     return Object.fromEntries(newMap)
