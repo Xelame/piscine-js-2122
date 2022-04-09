@@ -27,7 +27,6 @@ const reduceEntries = (object, func, acc) => {
     return acc
 }
 
-const totalCalories = (groceriesCart) => reduceEntries(groceriesCart, (acc, [key, value]) => acc + nutritionDB[key].calories*value/100, 0)
+const totalCalories = (groceriesCart) => Math.round((reduceEntries(groceriesCart, (acc, [key, value]) => acc + nutritionDB[key].calories*value/100, 0))*10)/10
 
 const lowCarbs = (groceriesCart) => filterEntries(groceriesCart, ([key,value]) => nutritionDB[key].carbs * value/100 < 50)
-
