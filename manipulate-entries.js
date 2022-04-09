@@ -9,11 +9,12 @@ const filterEntries = (object, func) => {
 }
 
 const mapEntries = (object, func) => {
-    const newObject = {}
-    for (let [key, value] in Object.entries(object)) {
-        newObject[key] = func(value)
+    const newMap = []
+    for (let [key, value] of Object.entries(object)) {
+        console.log(func([key, value]))
+        newMap.push(func([key, value]))
     }
-    return newObject
+    return Object.fromEntries(newMap)
 }
 
 const reduceEntries = (object, func, acc = 0) => {
@@ -26,4 +27,7 @@ const reduceEntries = (object, func, acc = 0) => {
 
 const groceriesCart1 = { oil: 500, onion: 230, garlic: 220, paprika: 480 }
 
-console.log(filterEntries(groceriesCart1, ([, v]) => v < 300))
+console.log(mapEntries(groceriesCart1, ([k, v]) => [
+    v > 250 ? `✔️${k}` : `❌${k}`,
+    v - 250,
+]))
