@@ -1,6 +1,6 @@
 const filterEntries = (object, func) => {
     let newObject = {}
-    for (let [key, value] in Object.entries(object)) {
+    for (let [key, value] of Object.entries(object)) {
         if (func([key, value])) {
             newObject[key] = value
         }
@@ -24,3 +24,6 @@ const reduceEntries = (object, func, acc = 0) => {
     return accumulator
 }
 
+const groceriesCart1 = { oil: 500, onion: 230, garlic: 220, paprika: 480 }
+
+console.log(filterEntries(groceriesCart1, ([, v]) => v < 300))
