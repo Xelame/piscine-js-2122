@@ -1,1 +1,1 @@
-const replica = ()
+const replica = 'a'
