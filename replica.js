@@ -1,9 +1,9 @@
 const replica = (...objects) => {
-    return Object.assign(objects[0], objects.slice(1))
+    let entries = []
+    for (let object of objects) {
+        for(let [key, value] of Object.entries(object)) {
+            entries.push([key, value])
+        }
+    }
+    return Object.fromEntries(entries)
 }
-
-console.log(replica(
-    {},
-    Object.freeze({ line: 'Replicants are like any other machine' }),
-    Object.freeze({ author: 'Rich' })
-  ));
