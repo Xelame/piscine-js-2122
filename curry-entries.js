@@ -43,3 +43,9 @@ const filterCurry = (func) => (object) => {
 const reduceScore = (objects, acc) =>  reduceCurry((acc, [, value]) => (acc += value.pilotingScore + value.shootingScore))(filterCurry(([, v]) => v.isForceUser)(objects), acc)
 
 const filterForce = (objects) => filterCurry(([, v]) => v.isForceUser && v.shootingScore >= 80)(objects)
+
+const mapAverage = (objects) => mapCurry(([k, v]) => {
+    v.averageScore = (v.pilotingScore + v.shootingScore) / 2
+    return [k, v]}
+    )(objects)
+
