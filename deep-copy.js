@@ -4,5 +4,6 @@ const deepCopy = (list) => {
     } else if (typeof list === 'object') {
         return Object.assign({}, list)
     }
+    return list
 }
 
