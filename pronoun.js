@@ -1,21 +1,21 @@
 // Réunis les tous ca pourrait passez 🤔
 
-const RegexList = [/(I) (\w+)/, /((Y|y)ou) (\w+)/, /((H|h)e) (\w+)/, /((S|s)he) (\w+)/, /((I|i)t) (\w+)/, /((W|w)e) (\w+)/, /((T|t)hey) (\w+)/]
+const regex = /(I |You |you |He |he |She |she |It |it |We |we |They |they )(\w+)/
 
 const ex = 'If he you want to buy something you have to pay.'
 
 const pronoun = (string = '') => {
     let finalObject = {}
-    for (let regex of RegexList) {
-        let count = 0
-        let words = []
-        while (string.match(regex)) {
-            count ++
-            words.push(string.match(regex)[3])
-            words.filter(word => (RegexList.every(regex2 => !(word+" a").match(regex2))))
-            finalObject[string.match(regex)[1].toLowerCase()] = { word : words, count : count}
-            string = string.replace(regex, '$3')
+    let words = []
+    while (string.match(regex)) {
+        if (!finalObject.hasOwnProperty(string.match(regex)[1].toLowerCase())) {
+            finalObject[string.match(regex)[1].toLowerCase()] = { word: [], count: 0}
         }
+
+        words = [string.match(regex)[2]].filter(word => !regex.test(word+" a"))
+        finalObject[string.match(regex)[1].toLowerCase()].count++
+        finalObject[string.match(regex)[1].toLowerCase()].word = finalObject[string.match(regex)[1].toLowerCase()].word.concat(words) 
+        string = string.replace(regex, '$2')
     }
     console.log(finalObject)
 }
