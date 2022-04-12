@@ -1,7 +1,8 @@
 
-const regex = /\b(I |You |you |He |he |She |she |It |it |We |we |They |they )(\w+)/
+const regex = /\b(I |i |You |you |He |he |She |she |It |it |We |we |They |they )(\w+)/
 
 const pronoun = (string = '') => {
+    string = string.toLowerCase()
     let finalObject = {}
     let words = []
     while (string.match(regex)) {
