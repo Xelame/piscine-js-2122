@@ -1,6 +1,6 @@
 // Réunis les tous ca pourrait passez 🤔
 
-const regex = /(I |You |you |He |he |She |she |It |it |We |we |They |they )(\w+)/
+const regex = /\b(I |You |you |He |he |She |she |It |it |We |we |They |they )(\w+)/
 
 const ex = 'If he you want to buy something you have to pay.'
 
