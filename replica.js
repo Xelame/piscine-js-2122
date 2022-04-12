@@ -11,5 +11,3 @@ const replica = (...objects) => {
     }
     return Object.fromEntries(entries)
 }
-
-console.log(replica({ a: { b: 1, c: 2 } }, { a: { c: 23 } }));
