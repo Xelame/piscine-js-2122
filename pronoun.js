@@ -1,5 +1,5 @@
 
-const regex = /\b(I|You|you|He|he|She|she|It|it|We|we|They|they)( (\w+)|\b)/
+const regex = /(I|i|You|you|He|he|She|she|It|it|We|we|They|they)( (\w+)|\b)/
 
 const pronoun = (string = '') => {
     string = string.toLowerCase()
