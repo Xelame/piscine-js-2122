@@ -13,7 +13,7 @@ const pronoun = (string = '') => {
         }
         words = [string.match(regex)[3]].filter(word => !regex.test(word+" a"))
         finalObject[key].count++
-        if (word[0]) {
+        if (words[0]) {
             finalObject[key].word = finalObject[key].word.concat(words) 
         }
         string = string.replace(regex, '$2')
