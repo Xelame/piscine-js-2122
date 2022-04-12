@@ -1,13 +1,7 @@
 const replica = (...objects) => {
-    let entries = []
+    let mainObject = {}
     for (let object of objects) {
-        for(let [key, value] of Object.entries(object)) {
-            if (key in Object.fromEntries(entries) && typeof Object.fromEntries(entries)[key] === 'object') {
-                entries[key] = Object.entries(Object.assign(Object.fromEntries(entries)[key], value))
-            } else {
-                entries.push([key, value])
-            }
-        }
+        Object.assign(mainObject, object)
     }
-    return Object.fromEntries(entries)
+    return mainObject
 }
