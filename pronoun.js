@@ -8,19 +8,20 @@ const pronoun = (string = '') => {
     let finalObject = {}
     let words = []
     while (string.match(regex)) {
-        if (!finalObject.hasOwnProperty(string.match(regex)[1].toLowerCase().slice(0, string.match(regex)[1].length-1))) {
-            finalObject[string.match(regex)[1].toLowerCase().slice(0, string.match(regex)[1].length-1)] = { word: [], count: 0}
+        let key = string.match(regex)[1].toLowerCase().slice(0, string.match(regex)[1].length-1)
+        console.log(key);
+        if (!finalObject.hasOwnProperty(key)) {
+            finalObject[key] = { word: [], count: 0}
         }
-
         words = [string.match(regex)[2]].filter(word => !regex.test(word+" a"))
-        finalObject[string.match(regex)[1].toLowerCase().slice(0, string.match(regex)[1].length-1)].count++
-        finalObject[string.match(regex)[1].toLowerCase().slice(0, string.match(regex)[1].length-1)].word = finalObject[string.match(regex)[1].toLowerCase()].word.concat(words) 
+        finalObject[key].count++
+        finalObject[key].word = finalObject[key].word.concat(words) 
         string = string.replace(regex, '$2')
     }
     return finalObject
 }
 
-pronoun(ex)
+console.log(pronoun(ex))
 
 /* Exemple
 
