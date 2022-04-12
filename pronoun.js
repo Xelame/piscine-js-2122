@@ -17,7 +17,7 @@ const pronoun = (string = '') => {
         finalObject[string.match(regex)[1].toLowerCase()].word = finalObject[string.match(regex)[1].toLowerCase()].word.concat(words) 
         string = string.replace(regex, '$2')
     }
-    console.log(finalObject)
+    return finalObject
 }
 
 pronoun(ex)
