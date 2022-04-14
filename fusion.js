@@ -25,6 +25,8 @@ const Join = (sum, newValue) => {
         if (typeof sum == 'string') {
             sum = `${sum} ${newValue}`
         }
+    } else {
+        sum = newValue
     }
     return sum
 }
