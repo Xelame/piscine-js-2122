@@ -1,37 +1,24 @@
-// Réunis les tous ca pourrait passez 🤔
 
-const RegexList = [/(I) (\w+)/, /((Y|y)ou) (\w+)/, /((H|h)e) (\w+)/, /((S|s)he) (\w+)/, /((I|i)t) (\w+)/, /((W|w)e) (\w+)/, /((T|t)hey) (\w+)/]
-
-const ex = 'If he you want to buy something you have to pay.'
+const regex = /\b(I|i|You|you|He|he|She|she|It|it|We|we|They|they)( (\w+)|\b)/
 
 const pronoun = (string = '') => {
+    string = string.toLowerCase()
     let finalObject = {}
-    for (let regex of RegexList) {
-        let count = 0
-        let words = []
-        while (string.match(regex)) {
-            count ++
-            words.push(string.match(regex)[3])
-            words.filter(word => (RegexList.every(regex2 => !(word+" a").match(regex2))))
-            finalObject[string.match(regex)[1].toLowerCase()] = { word : words, count : count}
-            string = string.replace(regex, '$3')
+    let words = []
+    while (string.match(regex)) {
+        let key = string.match(regex)[1].toLowerCase()
+        console.log(key);
+        if (!finalObject.hasOwnProperty(key)) {
+            finalObject[key] = { word: [], count: 0}
         }
+        words = [string.match(regex)[3]].filter(word => !regex.test(word+" a"))
+        finalObject[key].count++
+        if (words[0]) {
+            finalObject[key].word = finalObject[key].word.concat(words) 
+        }
+        string = string.replace(regex, '$2')
     }
-    console.log(finalObject)
+    return finalObject
 }
 
-pronoun(ex)
-
-/* Exemple
-
-const ex = 'Using Array Destructuring, you you can iterate through objects easily.'
-
-{ you: { word: [ 'can' ], count: 2 } }
-
-
-
-{
-  he: { word: [], count: 1}
-  you: { word: [ 'want', 'have' ], count: 2 }
-}
- */
+console.log(pronoun("If he you want to buy something you have to pay you"))
