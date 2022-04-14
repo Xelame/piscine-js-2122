@@ -19,12 +19,12 @@ const Join = (sum, newValue) => {
         if (typeof sum == typeof newValue) {
             if (typeof sum == 'number') {
                 sum += newValue
-            }
-            if (Array.isArray(sum)) {
+            } else if (Array.isArray(sum)) {
                 sum = sum.concat(newValue)
-            }
-            if (typeof sum == 'string') {
+            } else if (typeof sum == 'string') {
                 sum = `${sum} ${newValue}`
+            } else if (typeof sum == 'object') {
+                sum = fusion(sum, newValue)
             }
         } else {
             sum = newValue
