@@ -15,19 +15,15 @@ const fusion = (...objects) => {
 }
 
 const Join = (sum, newValue) => {
-    if (newValue) {
-        if (typeof sum == typeof newValue) {
-            if (typeof sum == 'number') {
-                sum += newValue
-            }
-            if (Array.isArray(sum)) {
-                sum = sum.concat(newValue)
-            }
-            if (typeof sum == 'string') {
-                sum = `${sum} ${newValue}`
-            }
-        } else {
-            sum = newValue
+    if (typeof sum == typeof newValue) {
+        if (typeof sum == 'number') {
+            sum += newValue
+        }
+        if (Array.isArray(sum)) {
+            sum = sum.concat(newValue)
+        }
+        if (typeof sum == 'string') {
+            sum = `${sum} ${newValue}`
         }
     }
     return sum
